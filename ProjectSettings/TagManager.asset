@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - PlayerShip
+  - PlayerEmptySpace
+  - PlayerUnit
+  - EnemyUnit
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -39,11 +44,11 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Background
     uniqueID: 2004780033
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: Above
     uniqueID: 258179957
