@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyShipMovementController : MonoBehaviour
+public class NewBehaviourScript : MonoBehaviour
 {
      public float speed;
     public Transform target;

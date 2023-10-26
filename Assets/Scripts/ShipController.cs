@@ -9,16 +9,12 @@ public class ShipControls : MonoBehaviour
     public float maxSpeed = 10;
     public float rotationSpeed = 100;
     public GameObject battleButton;
-    public GameObject victoryText;
-    public GameObject chest;
 
     // Start is called before the first frame update
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
         battleButton.SetActive(false);
-        victoryText.SetActive(false);
-        chest.SetActive(true);
     }
 
     public void HandleMoveShip(Vector2 movementVector)
@@ -37,10 +33,6 @@ public class ShipControls : MonoBehaviour
         Debug.Log("Collided with Something");
         if(other.gameObject.CompareTag("Enemy")) {
             battleButton.SetActive(true);
-        }
-        if(other.gameObject.CompareTag("Finish")) {
-            victoryText.SetActive(true);
-            chest.SetActive(false);
         }
     }
 }
