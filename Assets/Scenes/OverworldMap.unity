@@ -3870,7 +3870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79b8f1bd5cfc0450a9dbf2367c00d50d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 70
+  maxSpeed: 150
   rotationSpeed: 200
   battleButton: {fileID: 863405730}
   victoryText: {fileID: 0}
