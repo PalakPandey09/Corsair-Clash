@@ -668,7 +668,6 @@ MonoBehaviour:
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   enemyUnits: []
-  enemyUnit: {fileID: 0}
   PlayerBullet1: {fileID: 1895591220503798199, guid: 6c7d247398e564413a9ffa926789b3da, type: 3}
 --- !u!1 &143363706
 GameObject:
@@ -1519,7 +1518,6 @@ MonoBehaviour:
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   enemyUnits: []
-  enemyUnit: {fileID: 0}
   PlayerBullet1: {fileID: 1895591220503798199, guid: 6c7d247398e564413a9ffa926789b3da, type: 3}
 --- !u!1 &417137182
 GameObject:
@@ -1693,7 +1691,6 @@ MonoBehaviour:
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   enemyUnits: []
-  enemyUnit: {fileID: 0}
   PlayerBullet1: {fileID: 1895591220503798199, guid: 6c7d247398e564413a9ffa926789b3da, type: 3}
 --- !u!50 &467317345
 Rigidbody2D:
@@ -1882,7 +1879,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 303.83, y: -100.98003}
+  m_AnchoredPosition: {x: 303.83, y: -100.98001}
   m_SizeDelta: {x: -623.82, y: -219.55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &474289261
@@ -2439,8 +2436,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2af4a4631b6ae849bceb5c4b2101d77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  connectedBar: {fileID: 853402796}
   damage: 3
   enemy_ship_healthbar: {fileID: 0}
+  battleManager: {fileID: 1173592420}
   healthbar_enemy_unit_1: {fileID: 953644647}
   healthbar_enemy_unit_2: {fileID: 953644647}
   healthbar_enemy_unit_3: {fileID: 953644647}
@@ -2456,7 +2455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620b1a2a62af6134f8e118199fc8eabd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  battleManager: {fileID: 1173592420}
+  battleManager: {fileID: 0}
 --- !u!1 &675064402
 GameObject:
   m_ObjectHideFlags: 0
@@ -4427,7 +4426,6 @@ MonoBehaviour:
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   enemyUnits: []
-  enemyUnit: {fileID: 0}
   PlayerBullet1: {fileID: 1895591220503798199, guid: 6c7d247398e564413a9ffa926789b3da, type: 3}
 --- !u!1 &1260805134
 GameObject:
@@ -4956,7 +4954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620b1a2a62af6134f8e118199fc8eabd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  battleManager: {fileID: 1173592420}
+  battleManager: {fileID: 0}
 --- !u!114 &1423621299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4969,8 +4967,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2af4a4631b6ae849bceb5c4b2101d77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  connectedBar: {fileID: 1868773538}
+  damage: 3
   enemy_ship_healthbar: {fileID: 0}
+  battleManager: {fileID: 1173592420}
   healthbar_enemy_unit_1: {fileID: 1346237325}
   healthbar_enemy_unit_2: {fileID: 1868773540}
   healthbar_enemy_unit_3: {fileID: 1346237325}
@@ -5809,7 +5809,6 @@ MonoBehaviour:
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   enemyUnits: []
-  enemyUnit: {fileID: 0}
   PlayerBullet1: {fileID: 1895591220503798199, guid: 6c7d247398e564413a9ffa926789b3da, type: 3}
 --- !u!1 &1938267360
 GameObject:
@@ -5997,7 +5996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620b1a2a62af6134f8e118199fc8eabd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  battleManager: {fileID: 1173592420}
+  battleManager: {fileID: 0}
 --- !u!114 &1938267368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6010,8 +6009,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2af4a4631b6ae849bceb5c4b2101d77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  connectedBar: {fileID: 735659392}
+  damage: 3
   enemy_ship_healthbar: {fileID: 0}
+  battleManager: {fileID: 1173592420}
   healthbar_enemy_unit_1: {fileID: 300273808}
   healthbar_enemy_unit_2: {fileID: 300273808}
   healthbar_enemy_unit_3: {fileID: 300273808}

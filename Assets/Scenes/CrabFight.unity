@@ -361,6 +361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 816736385}
+  battleManager: {fileID: 1173592420}
   claws: []
   bodyHealth: {fileID: 735659392}
 --- !u!4 &72383879
@@ -715,7 +716,6 @@ MonoBehaviour:
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   enemyUnits: []
-  enemyUnit: {fileID: 0}
   PlayerBullet1: {fileID: 1895591220503798199, guid: 6c7d247398e564413a9ffa926789b3da, type: 3}
 --- !u!1 &143363706
 GameObject:
@@ -1329,7 +1329,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -324, y: 203}
+  m_AnchoredPosition: {x: -324, y: 188}
   m_SizeDelta: {x: 175.22, y: 43.364}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &318804895
@@ -1817,7 +1817,6 @@ MonoBehaviour:
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   enemyUnits: []
-  enemyUnit: {fileID: 0}
   PlayerBullet1: {fileID: 1895591220503798199, guid: 6c7d247398e564413a9ffa926789b3da, type: 3}
 --- !u!1 &417137182
 GameObject:
@@ -1855,7 +1854,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -324.6, y: 204.45}
+  m_AnchoredPosition: {x: -324.6, y: 190}
   m_SizeDelta: {x: 190.45, y: 46.85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &417137184
@@ -1991,7 +1990,6 @@ MonoBehaviour:
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   enemyUnits: []
-  enemyUnit: {fileID: 0}
   PlayerBullet1: {fileID: 1895591220503798199, guid: 6c7d247398e564413a9ffa926789b3da, type: 3}
 --- !u!50 &467317345
 Rigidbody2D:
@@ -2221,109 +2219,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474289259}
   m_CullTransparentMesh: 1
---- !u!1 &503471166
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 503471170}
-  - component: {fileID: 503471169}
-  - component: {fileID: 503471168}
-  - component: {fileID: 503471167}
-  m_Layer: 5
-  m_Name: CrabIsland
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &503471167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 503471166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &503471168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 503471166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
---- !u!223 &503471169
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 503471166}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
---- !u!224 &503471170
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 503471166}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 929666148}
-  - {fileID: 1592993394}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
 --- !u!1 &522334987
 GameObject:
   m_ObjectHideFlags: 0
@@ -3122,8 +3017,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2af4a4631b6ae849bceb5c4b2101d77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  connectedBar: {fileID: 1868773538}
   damage: 0.75
   enemy_ship_healthbar: {fileID: 0}
+  battleManager: {fileID: 1173592420}
   healthbar_enemy_unit_1: {fileID: 1346237325}
   healthbar_enemy_unit_2: {fileID: 1346237325}
   healthbar_enemy_unit_3: {fileID: 1346237325}
@@ -3657,7 +3554,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -455.3, y: -31}
+  m_AnchoredPosition: {x: -458, y: -180}
   m_SizeDelta: {x: 31.0762, y: 2.9389}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &735659394
@@ -3986,7 +3883,8 @@ GameObject:
   - component: {fileID: 816736390}
   - component: {fileID: 816736387}
   - component: {fileID: 816736389}
-  - component: {fileID: 816736388}
+  - component: {fileID: 816736391}
+  - component: {fileID: 816736392}
   m_Layer: 0
   m_Name: CrabBody
   m_TagString: EnemyUnit
@@ -4061,42 +3959,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!893571522 &816736388
-CustomCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 816736385}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_CustomShapes:
-    m_Shapes: []
-    m_Vertices: []
 --- !u!50 &816736389
 Rigidbody2D:
   serializedVersion: 4
@@ -4136,11 +3998,61 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2af4a4631b6ae849bceb5c4b2101d77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  connectedBar: {fileID: 735659392}
   damage: 0.5
   enemy_ship_healthbar: {fileID: 0}
+  battleManager: {fileID: 1173592420}
   healthbar_enemy_unit_1: {fileID: 300273808}
   healthbar_enemy_unit_2: {fileID: 300273808}
   healthbar_enemy_unit_3: {fileID: 300273808}
+--- !u!70 &816736391
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816736385}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.012293657, y: -0.007990506}
+  m_Size: {x: 1.0163208, y: 1.0649998}
+  m_Direction: 1
+--- !u!114 &816736392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816736385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dd66a7da6c9d4bf9af3ae03ff9d6b09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTargeted: 0
 --- !u!1 &832075490
 GameObject:
   m_ObjectHideFlags: 0
@@ -4306,7 +4218,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -584.7, y: -101.7}
+  m_AnchoredPosition: {x: -584.7, y: -109}
   m_SizeDelta: {x: 31.0762, y: 2.9389}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &853402798
@@ -4457,11 +4369,11 @@ Transform:
   m_GameObject: {fileID: 929666147}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -429.3237, y: -232.71, z: 0}
+  m_LocalPosition: {x: 1.88, y: 0.75, z: 0}
   m_LocalScale: {x: 12.348105, y: 1.7685475, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 503471170}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &929666149
 SpriteRenderer:
@@ -5279,10 +5191,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerUnitTargeting: {fileID: 0}
   startBattle: {fileID: 417137182}
+  isBossFight: 1
   playerUnits: []
+  enemyUnits: []
   placeUnits: {fileID: 679272876}
   endBattle: {fileID: 598895788}
   startEnemyFiring: 0
+  numEnemies: 0
   numDestroyed: 0
 --- !u!4 &1173592421
 Transform:
@@ -5698,7 +5613,6 @@ MonoBehaviour:
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   enemyUnits: []
-  enemyUnit: {fileID: 0}
   PlayerBullet1: {fileID: 1895591220503798199, guid: 6c7d247398e564413a9ffa926789b3da, type: 3}
 --- !u!1 &1260805134
 GameObject:
@@ -6349,11 +6263,11 @@ Transform:
   m_GameObject: {fileID: 1592993393}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -429.33, y: -232.57101, z: 0}
+  m_LocalPosition: {x: 1.8737134, y: 0.8889923, z: 0}
   m_LocalScale: {x: 10.7145, y: 1.282, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 503471170}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1592993395
 SpriteRenderer:
@@ -6993,7 +6907,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -326.5, y: -95.5}
+  m_AnchoredPosition: {x: -326.5, y: -108}
   m_SizeDelta: {x: 31.0762, y: 2.9389}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1868773540
@@ -7341,7 +7255,6 @@ MonoBehaviour:
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   enemyUnits: []
-  enemyUnit: {fileID: 0}
   PlayerBullet1: {fileID: 1895591220503798199, guid: 6c7d247398e564413a9ffa926789b3da, type: 3}
 --- !u!1 &1950959523
 GameObject:
@@ -7895,8 +7808,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2af4a4631b6ae849bceb5c4b2101d77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  connectedBar: {fileID: 853402796}
   damage: 0.75
   enemy_ship_healthbar: {fileID: 0}
+  battleManager: {fileID: 1173592420}
   healthbar_enemy_unit_1: {fileID: 953644647}
   healthbar_enemy_unit_2: {fileID: 953644647}
   healthbar_enemy_unit_3: {fileID: 953644647}
@@ -8055,7 +7970,8 @@ SceneRoots:
   - {fileID: 385155617}
   - {fileID: 1253014655}
   - {fileID: 467317349}
-  - {fileID: 503471170}
+  - {fileID: 929666148}
+  - {fileID: 1592993394}
   - {fileID: 598895785}
   - {fileID: 679272877}
   - {fileID: 1521876155}
