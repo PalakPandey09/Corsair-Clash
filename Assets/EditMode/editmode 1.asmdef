@@ -6,10 +6,10 @@
         "UnityEditor.TestRunner",
         "TL1",
         "NewAssembly",
-        "TL3",
         "TL4",
         "TL5",
-        "TL6"
+        "TL6",
+        "TL3TestVisibility"
     ],
     "includePlatforms": [
         "Editor"
