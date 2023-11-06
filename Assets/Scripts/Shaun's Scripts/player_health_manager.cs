@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class player_health : MonoBehaviour
+public class player_health_manager : MonoBehaviour
 {  
     //player loss boolean
     private bool player_is_sunk = false;

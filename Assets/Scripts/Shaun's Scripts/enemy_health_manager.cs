@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class enemy_health : MonoBehaviour
+public class enemy_health_manager : MonoBehaviour
 {
    //enemy loss boolean
     private bool enemy_is_sunk = false;
     //script input values for damage
     public float damage = 5;
-    
+    public GameObject connectedBar;
+    public BattleManager battleManager;
      //variables for enemy health
     public Image enemy_ship_healthbar;
     public float enemy_ship_health = 150f;
@@ -35,7 +36,12 @@ public class enemy_health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(enemy_unit_1_health <= 0)
+        {
+            battleManager.numDestroyed++;
+            this.gameObject.SetActive(false);
+            connectedBar.SetActive(false);
+        }
     }
 
     public void enemy_ship_takedamage_on_collision(Collision collision){

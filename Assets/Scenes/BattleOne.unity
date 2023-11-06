@@ -2260,10 +2260,10 @@ GameObject:
   m_Component:
   - component: {fileID: 619509203}
   - component: {fileID: 619509202}
+  - component: {fileID: 619509207}
   - component: {fileID: 619509200}
   - component: {fileID: 619509199}
   - component: {fileID: 619509204}
-  - component: {fileID: 619509205}
   - component: {fileID: 619509206}
   m_Layer: 0
   m_Name: EnemyUnit1
@@ -2424,25 +2424,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTargeted: 0
---- !u!114 &619509205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 619509198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2af4a4631b6ae849bceb5c4b2101d77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  connectedBar: {fileID: 853402796}
-  damage: 3
-  enemy_ship_healthbar: {fileID: 0}
-  battleManager: {fileID: 1173592420}
-  healthbar_enemy_unit_1: {fileID: 953644647}
-  healthbar_enemy_unit_2: {fileID: 953644647}
-  healthbar_enemy_unit_3: {fileID: 953644647}
 --- !u!114 &619509206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2455,7 +2436,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620b1a2a62af6134f8e118199fc8eabd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  battleManager: {fileID: 0}
+--- !u!114 &619509207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619509198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a523080fec7049f2957cbc755e2b952, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 3
+  connectedBar: {fileID: 853402796}
+  battleManager: {fileID: 1173592420}
+  enemy_ship_healthbar: {fileID: 0}
+  enemy_ship_health: 150
+  level_1_ship_health: 150
+  healthbar_enemy_unit_1: {fileID: 953644647}
+  healthbar_enemy_unit_2: {fileID: 953644647}
+  healthbar_enemy_unit_3: {fileID: 953644647}
+  enemy_unit_1_health: 10
+  enemy_unit_2_health: 10
+  enemy_unit_3_health: 10
+  level_1_unit_health: 10
 --- !u!1 &675064402
 GameObject:
   m_ObjectHideFlags: 0
@@ -4007,10 +4012,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerUnitTargeting: {fileID: 0}
   startBattle: {fileID: 417137182}
+  isBossFight: 0
   playerUnits: []
+  enemyUnits: []
   placeUnits: {fileID: 679272876}
   endBattle: {fileID: 598895788}
   startEnemyFiring: 0
+  numEnemies: 0
   numDestroyed: 0
 --- !u!4 &1173592421
 Transform:
@@ -4954,7 +4962,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620b1a2a62af6134f8e118199fc8eabd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  battleManager: {fileID: 0}
 --- !u!114 &1423621299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4964,16 +4971,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1423621291}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2af4a4631b6ae849bceb5c4b2101d77, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a523080fec7049f2957cbc755e2b952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectedBar: {fileID: 1868773538}
   damage: 3
-  enemy_ship_healthbar: {fileID: 0}
+  connectedBar: {fileID: 1868773538}
   battleManager: {fileID: 1173592420}
+  enemy_ship_healthbar: {fileID: 0}
+  enemy_ship_health: 150
+  level_1_ship_health: 150
   healthbar_enemy_unit_1: {fileID: 1346237325}
-  healthbar_enemy_unit_2: {fileID: 1868773540}
+  healthbar_enemy_unit_2: {fileID: 1346237325}
   healthbar_enemy_unit_3: {fileID: 1346237325}
+  enemy_unit_1_health: 10
+  enemy_unit_2_health: 10
+  enemy_unit_3_health: 10
+  level_1_unit_health: 10
 --- !u!1 &1521876152
 GameObject:
   m_ObjectHideFlags: 0
@@ -5996,7 +6009,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620b1a2a62af6134f8e118199fc8eabd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  battleManager: {fileID: 0}
 --- !u!114 &1938267368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6006,16 +6018,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1938267360}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2af4a4631b6ae849bceb5c4b2101d77, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a523080fec7049f2957cbc755e2b952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectedBar: {fileID: 735659392}
   damage: 3
-  enemy_ship_healthbar: {fileID: 0}
+  connectedBar: {fileID: 735659392}
   battleManager: {fileID: 1173592420}
+  enemy_ship_healthbar: {fileID: 0}
+  enemy_ship_health: 150
+  level_1_ship_health: 150
   healthbar_enemy_unit_1: {fileID: 300273808}
   healthbar_enemy_unit_2: {fileID: 300273808}
   healthbar_enemy_unit_3: {fileID: 300273808}
+  enemy_unit_1_health: 10
+  enemy_unit_2_health: 10
+  enemy_unit_3_health: 10
+  level_1_unit_health: 10
 --- !u!1 &2096458886
 GameObject:
   m_ObjectHideFlags: 0

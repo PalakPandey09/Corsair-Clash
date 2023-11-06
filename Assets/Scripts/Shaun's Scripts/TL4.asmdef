@@ -1,3 +1,16 @@
 {
-	"name": "TL4"
+    "name": "TL4",
+    "rootNamespace": "",
+    "references": [
+        "GUID:12cacf5ba0e7d4efa83e89ee6ce70f7e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
