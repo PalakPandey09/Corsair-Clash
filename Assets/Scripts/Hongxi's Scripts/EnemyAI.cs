@@ -17,23 +17,30 @@ public class EnemyAI: MonoBehaviour {
    //public BattleManager battleManager;
    private Status status;
    //Change GameObject to PlayerUnit after PlayerUnit implemented
-   private GameObject target;
+   public GameObject target=new GameObject();
+   public GameObject[] allPlayerUnits;
 
    /// <summary>
    /// One of Strategy can be taken by Enemy Unit.
    /// Select a player unit as attack target.
    /// </summary>
-   private void Target() {
+   public void Target() {
       if(target == null && status == Status.Attacking) {
 
          status = Status.Targeting;
 
          //Could Add Delay
+         
+      GameObject playerUnit1 = new GameObject();
+      GameObject playerUnit2 = new GameObject();
+      playerUnit1.tag = "PlayerUnit";
+      playerUnit2.tag = "PlayerUnit";
 
-         var allPlayerUnits = GameObject.FindGameObjectsWithTag("PlayerUnit");
+         allPlayerUnits = GameObject.FindGameObjectsWithTag("PlayerUnit");
 
          if(allPlayerUnits.Length > 0) {
-            target = allPlayerUnits[Random.Range(0, allPlayerUnits.Length - 1)];
+            // target = allPlayerUnits[Random.Range(0, allPlayerUnits.Length+1)];
+            // target=playerUnit1;
          }
       }
       return;
