@@ -21,47 +21,39 @@ public class PlayerUnitTargeting : MonoBehaviour
     void Start()
     {
         enemyUnits = GameObject.FindGameObjectsWithTag("EnemyUnit");
-        foreach(GameObject eUnit in enemyUnits){
-            numEnemyUnits = numEnemyUnits + 1; 
-        }
+        //foreach(GameObject eUnit in enemyUnits){
+            //numEnemyUnits = numEnemyUnits + 1; 
+        //}
     }
 
     // Update is called once per frame
     void Update()
     {
         enemyUnits = GameObject.FindGameObjectsWithTag("EnemyUnit");
-        if(numCycles == numEnemyUnits){
-            foreach(GameObject eUnit in enemyUnits){
-                enemyUnitTargeting = eUnit.GetComponent<EnemyUnitTargeting> ();
-                enemyUnitTargeting.isTargeted = false;
-            }
-            numCycles = 1;
-        }
+        //if(numCycles == numEnemyUnits){
+            //foreach(GameObject eUnit in enemyUnits){
+                //enemyUnitTargeting = eUnit.GetComponent<EnemyUnitTargeting> ();
+                //enemyUnitTargeting.isTargeted = false;
+            //}
+            //numCycles = 1;
+        //}
 
         if(PlaceUnitsCanvas.enabled == false && foundTarget == false) {
-            foreach (GameObject eUnit in enemyUnits){
-                enemyUnitTargeting = eUnit.GetComponent<EnemyUnitTargeting> ();
-                if(enemyUnitTargeting.isTargeted == false){
-                    float[] speeds = new float[3] {2.5f, 3.0f, 3.5f};
-                    float randomSpeed = speeds[Random.Range(0, speeds.Length)];
-                    targetX = eUnit.transform.position.x;
-                    targetY = eUnit.transform.position.y;
-                    enemyUnitTargeting.isTargeted = true;
-                    foundTarget = true;
-                    CancelInvoke();
-                    InvokeRepeating("FireOnEnemy", randomSpeed, randomSpeed);
-                    return;
-                }
-                if(enemyUnitTargeting.isTargeted == true){
-                    numCycles++;
-                }
-            }
-        }     
-    }
+            float[] speeds = new float[3] {2.5f, 3.0f, 3.5f};
+            float randomSpeed = speeds[Random.Range(0, speeds.Length)];
+            int randomTarget = Random.Range(0, enemyUnits.Length);
+            GameObject eUnit = enemyUnits[randomTarget];
+            targetX = eUnit.transform.position.x;
+            targetY = eUnit.transform.position.y;
+            //enemyUnitTargeting.isTargeted = true;
+            foundTarget = true;
+            InvokeRepeating("FireOnEnemy", randomSpeed, randomSpeed);
+            return;
+        }
+    }     
 
     void FireOnEnemy(){
         //enemyUnitTargeting = null;
-        foundTarget = false;
         Debug.Log("Unit: " + this.name + " firing on " + targetX + " ");
         spawnX = gameObject.GetComponent<DragNDrop>().startX;
         spawnY = gameObject.GetComponent<DragNDrop>().startY;
@@ -69,6 +61,11 @@ public class PlayerUnitTargeting : MonoBehaviour
         bullet = Instantiate(PlayerBullet1, new Vector2(this.transform.position.x, this.transform.position.y+0.4f), Quaternion.Euler(new Vector3(targetX, targetY, 0)));
                 bullet.GetComponentInChildren<BulletManager>().enemyX = targetX;
                 bullet.GetComponentInChildren<BulletManager>().enemyY = targetY;
+        enemyUnits = GameObject.FindGameObjectsWithTag("EnemyUnit");
+        int randomTarget = Random.Range(0, enemyUnits.Length);
+        GameObject eUnit = enemyUnits[randomTarget];
+        targetX = eUnit.transform.position.x;
+        targetY = eUnit.transform.position.y;
     }
 }
 

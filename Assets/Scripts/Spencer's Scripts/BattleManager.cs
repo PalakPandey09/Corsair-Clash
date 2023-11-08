@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class BattleManager : MonoBehaviour
 {
+    public static BattleManager instance;
     public PlayerUnitTargeting playerUnitTargeting;
     public GameObject startBattle;
     public bool isBossFight = false;
     public GameObject[] playerUnits;
-    public GameObject[] enemyUnits;
     public Canvas placeUnits;
     public Canvas endBattle;
     public bool startEnemyFiring = false;
@@ -17,19 +17,20 @@ public class BattleManager : MonoBehaviour
     public int numEnemies = 0;
     private int numChecked = 0;
     public int numDestroyed = 0;
+    private void Awake()
+    {
+        if (instance == null)
+            instance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         startBattle.SetActive(false);
         endBattle.enabled = false;
         playerUnits = GameObject.FindGameObjectsWithTag("PlayerUnit");
-        enemyUnits = GameObject.FindGameObjectsWithTag("EnemyUnit");
-        
         foreach(GameObject unit in playerUnits){
             numUnits = numUnits + 1; 
-        }
-        foreach(GameObject enemy in enemyUnits){
-            numEnemies = numEnemies + 1; 
         }
     }
 
