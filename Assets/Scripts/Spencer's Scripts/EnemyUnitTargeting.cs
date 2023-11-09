@@ -8,6 +8,7 @@ public class EnemyUnitTargeting : MonoBehaviour
     public float targetY = 0f;
     private float spawnX = 0;
     private float spawnY = 0;
+    private AudioSource audioSource;
     public bool foundTarget = false;
     public Canvas PlaceUnitsCanvas;
     public GameObject[] playerUnits;
@@ -16,6 +17,7 @@ public class EnemyUnitTargeting : MonoBehaviour
     void Start()
     {
         BattleManager.instance.numEnemies++;
+        audioSource = GetComponent<AudioSource>();
         playerUnits = GameObject.FindGameObjectsWithTag("PlayerUnit");
     }
 
@@ -37,6 +39,8 @@ public class EnemyUnitTargeting : MonoBehaviour
         }
     }
     void FireOnPlayer(){
+        audioSource.volume = 0.5f;
+        audioSource.Play();
         Debug.Log("Unit: " + this.name + " firing on " + targetX + " ");
         spawnX = this.gameObject.transform.position.x;
         spawnY = this.gameObject.transform.position.y;
