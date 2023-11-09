@@ -6,38 +6,23 @@ public class PlayerUnitTargeting : MonoBehaviour
 {
     public float targetX = 0f;
     public float targetY = 0f;
-    
-    private int numEnemyUnits = 0;
-    private int numCycles = 1;
     private float spawnX = 0;
     private float spawnY = 0;
     public EnemyUnitTargeting enemyUnitTargeting;
     public bool foundTarget = false;
     public Canvas PlaceUnitsCanvas;
     public GameObject[] enemyUnits;
-    //public GameObject enemyUnit;
     public GameObject PlayerBullet1;
     // Start is called before the first frame update
     void Start()
     {
         enemyUnits = GameObject.FindGameObjectsWithTag("EnemyUnit");
-        //foreach(GameObject eUnit in enemyUnits){
-            //numEnemyUnits = numEnemyUnits + 1; 
-        //}
     }
 
     // Update is called once per frame
     void Update()
     {
         enemyUnits = GameObject.FindGameObjectsWithTag("EnemyUnit");
-        //if(numCycles == numEnemyUnits){
-            //foreach(GameObject eUnit in enemyUnits){
-                //enemyUnitTargeting = eUnit.GetComponent<EnemyUnitTargeting> ();
-                //enemyUnitTargeting.isTargeted = false;
-            //}
-            //numCycles = 1;
-        //}
-
         if(PlaceUnitsCanvas.enabled == false && foundTarget == false) {
             float[] speeds = new float[3] {2.5f, 3.0f, 3.5f};
             float randomSpeed = speeds[Random.Range(0, speeds.Length)];
@@ -57,10 +42,16 @@ public class PlayerUnitTargeting : MonoBehaviour
         Debug.Log("Unit: " + this.name + " firing on " + targetX + " ");
         spawnX = gameObject.GetComponent<DragNDrop>().startX;
         spawnY = gameObject.GetComponent<DragNDrop>().startY;
-        GameObject bullet;
-        bullet = Instantiate(PlayerBullet1, new Vector2(this.transform.position.x, this.transform.position.y+0.4f), Quaternion.Euler(new Vector3(targetX, targetY, 0)));
-                bullet.GetComponentInChildren<BulletManager>().enemyX = targetX;
-                bullet.GetComponentInChildren<BulletManager>().enemyY = targetY;
+        GameObject bullet = ObjectPool.SharedInstance.GetPooledObject(); 
+        if (bullet != null) {
+            bullet.transform.position = new Vector2(this.transform.position.x, this.transform.position.y+0.4f);
+            bullet.transform.rotation = Quaternion.Euler(new Vector3(targetX, targetY, 0));
+            bullet.SetActive(true);
+        }
+        //GameObject bullet;
+        //bullet = Instantiate(PlayerBullet1, new Vector2(this.transform.position.x, this.transform.position.y+0.4f), Quaternion.Euler(new Vector3(targetX, targetY, 0)));
+        bullet.GetComponentInChildren<BulletManager>().enemyX = targetX;
+        bullet.GetComponentInChildren<BulletManager>().enemyY = targetY;
         enemyUnits = GameObject.FindGameObjectsWithTag("EnemyUnit");
         int randomTarget = Random.Range(0, enemyUnits.Length);
         GameObject eUnit = enemyUnits[randomTarget];
