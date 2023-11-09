@@ -10,7 +10,7 @@ public class enemy_health_manager : MonoBehaviour
     //script input values for damage
     public float damage = 5;
     public GameObject connectedBar;
-    public BattleManager battleManager;
+    //public BattleManager battleManager;
      //variables for enemy health
     public Image enemy_ship_healthbar;
     public float enemy_ship_health = 150f;
@@ -38,8 +38,9 @@ public class enemy_health_manager : MonoBehaviour
     {
         if(enemy_unit_1_health <= 0)
         {
-            battleManager.numDestroyed++;
-            this.gameObject.SetActive(false);
+            BattleManager.instance.numDestroyed++;
+            //this.gameObject.SetActive(false);
+            Destroy(this.gameObject);
             connectedBar.SetActive(false);
         }
     }

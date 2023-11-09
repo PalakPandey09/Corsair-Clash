@@ -19,10 +19,16 @@ public class BulletManager : MonoBehaviour
     {
         projectileDirection = new Vector2(enemyX, enemyY);
         transform.position = Vector2.MoveTowards(transform.position, projectileDirection, bulletSpeed * Time.deltaTime);
+        if(this.gameObject.transform.position.x == enemyX && this.gameObject.transform.position.y == enemyY)
+        {
+            //Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
+        }
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(this.gameObject);
+       //Destroy(this.gameObject);
+       this.gameObject.SetActive(false);
     }
 }

@@ -17,13 +17,13 @@ public class EnemyAI: MonoBehaviour {
    //public BattleManager battleManager;
    private Status status;
    //Change GameObject to PlayerUnit after PlayerUnit implemented
-   public GameObject target=new GameObject();
+   public GameObject target= new GameObject();
    public GameObject[] allPlayerUnits;
 
-   /// <summary>
-   /// One of Strategy can be taken by Enemy Unit.
-   /// Select a player unit as attack target.
-   /// </summary>
+   // <summary>
+   // One of Strategy can be taken by Enemy Unit.
+   // Select a player unit as attack target.
+   // </summary>
    public void Target() {
       if(target == null && status == Status.Attacking) {
 
@@ -46,11 +46,11 @@ public class EnemyAI: MonoBehaviour {
       return;
    }
 
-   /// <summary>
-   /// One of Strategy can be taken by Enemy Unit.
-   /// Attack given target variable.
-   /// </summary>
-   /// <param name="target"></param>
+   // <summary>
+   // One of Strategy can be taken by Enemy Unit.
+   // Attack given target variable.
+   // </summary>
+   // <param name="target"></param>
    private void Attack(GameObject target) {
       if(target != null) {
          //Send Message or Has Reference to Player Unit and call TakeDamage
