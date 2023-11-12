@@ -4,9 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class player_health_manager : MonoBehaviour
-{  
-    //player loss boolean
-    private bool player_is_sunk = false;
+{ 
     //script input values for damage
     public float damage;
     
@@ -44,7 +42,7 @@ public class player_health_manager : MonoBehaviour
         player_ship_health -= damage;
         player_ship_healthbar.fillAmount =  player_ship_health / level_1_ship_health;
             if(player_ship_health <= 0){
-                player_is_sunk = true;
+                
             }
         }
 
