@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class enemy_health_manager : MonoBehaviour
 {
-   //enemy loss boolean
-    private bool enemy_is_sunk = false;
+   
     //script input values for damage
     public float damage = 5;
     public GameObject connectedBar;
@@ -51,7 +50,7 @@ public class enemy_health_manager : MonoBehaviour
             enemy_ship_health -= damage;
             enemy_ship_healthbar.fillAmount =  enemy_ship_health / level_1_ship_health;
                 if(enemy_ship_health <= 0){
-                    enemy_is_sunk = true;
+                    
                 }
         }
 
