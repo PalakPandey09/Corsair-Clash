@@ -13,9 +13,9 @@ public class BattleManager : MonoBehaviour
     public Canvas placeUnits;
     public Canvas endBattle;
     public bool startEnemyFiring = false;
-    private int numUnits = 0;
+    public int numUnits = 0;
     public int numEnemies = 0;
-    private int numChecked = 0;
+    public int numChecked = 0;
     public int numDestroyed = 0;
     private void Awake()
     {
@@ -51,13 +51,21 @@ public class BattleManager : MonoBehaviour
         }
         if(numEnemies == numDestroyed && isBossFight == false)
         {
-            SceneManager.LoadScene("OverworldMapPostBattle");
+            ChangeScene();
         }
     }
 
     public void StartBattle() {
+        Debug.Log("Starting Battle");
         placeUnits.enabled = false;
         endBattle.enabled = true;
         startEnemyFiring = true;
     }
+
+    public virtual void ChangeScene()
+    {
+        SceneManager.LoadScene("OverworldMapPostBattle");
+    }
 }
+
+

@@ -3,38 +3,59 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CrabManager : MonoBehaviour
+public class CrabManager : BattleManager
 {
     public GameObject body;
-    public BattleManager battleManager;
     public GameObject[] claws;
     public GameObject bodyHealth;
-    private int numClaws = 0;
-
+    
     // Start is called before the first frame update
     void Start()
     {
         body.SetActive(false);
         bodyHealth.SetActive(false);
+        startBattle.SetActive(false);
+        endBattle.enabled = false;
+        playerUnits = GameObject.FindGameObjectsWithTag("PlayerUnit");
+        foreach(GameObject unit in playerUnits){
+            numUnits = numUnits + 1; 
+        }
         claws = GameObject.FindGameObjectsWithTag("EnemyUnit");
-        //Debug.Log(numClaws);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(battleManager.numDestroyed == 2)
+        numChecked = 0;
+        foreach(GameObject unit in playerUnits){
+            if(unit.transform.position.x < 4){
+                numChecked = numChecked + 1;
+            }
+        }
+        if(numChecked == numUnits) {
+            startBattle.SetActive(true);
+        }
+        if(numChecked != numUnits) {
+            startBattle.SetActive(false);
+        }
+        if(numDestroyed == 2)
         {
             BodyUp();
         }
-        if(battleManager.numDestroyed == 3)
+        if(numDestroyed == 3)
         {
-            SceneManager.LoadScene("OverworldMapPostBoss");
+            ChangeScene();
         }
     }
 
     public void BodyUp() {
         body.SetActive(true);
         bodyHealth.SetActive(true);
+    }
+
+    public override void ChangeScene()
+    {
+        base.ChangeScene();
+        SceneManager.LoadScene("OverworldMapPostBoss");
     }
 }

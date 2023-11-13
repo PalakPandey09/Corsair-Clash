@@ -10,6 +10,8 @@ public class PlayerUnitTargeting : MonoBehaviour
     private float spawnY = 0;
     public EnemyUnitTargeting enemyUnitTargeting;
     private AudioSource audioSource;
+    public AudioClip gunshot;
+    public AudioClip boom;
     public bool foundTarget = false;
     public Canvas PlaceUnitsCanvas;
     public GameObject[] enemyUnits;
@@ -42,6 +44,16 @@ public class PlayerUnitTargeting : MonoBehaviour
     void FireOnEnemy(){
         //enemyUnitTargeting = null;
         audioSource.volume = 0.5f;
+        float randomChance = Random.Range(0,100);
+        Debug.Log(randomChance);
+        if(randomChance == 99){
+            audioSource.clip = boom;
+            audioSource.volume = 0.75f;
+        }
+        else{
+            audioSource.clip = gunshot;
+            audioSource.volume = 0.5f;
+        }
         audioSource.Play();
         Debug.Log("Unit: " + this.name + " firing on " + targetX + " ");
         spawnX = gameObject.GetComponent<DragNDrop>().startX;
