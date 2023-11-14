@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//This class is a Sub Class of BattleManager
 public class CrabManager : BattleManager
 {
     public GameObject body;
@@ -12,6 +13,7 @@ public class CrabManager : BattleManager
     // Start is called before the first frame update
     void Start()
     {
+        //Sets the claws to be active and the body to be hidden
         body.SetActive(false);
         bodyHealth.SetActive(false);
         startBattle.SetActive(false);
@@ -38,14 +40,15 @@ public class CrabManager : BattleManager
         if(numChecked != numUnits) {
             startBattle.SetActive(false);
         }
+        //Once the claws are destroyed, activate the body
         if(numDestroyed == 2)
         {
             BodyUp();
         }
+        //Once the body is destroyed, sets the win condition to true.
         if(numDestroyed == 3)
         {
             isWon = 1;
-            //ChangeScene();
         }
     }
 
@@ -54,6 +57,7 @@ public class CrabManager : BattleManager
         bodyHealth.SetActive(true);
     }
 
+    //This method overrides the BattleManager change scene to be the Overworld Map after the boss battle.
     public override void ChangeScene()
     {
         base.ChangeScene();

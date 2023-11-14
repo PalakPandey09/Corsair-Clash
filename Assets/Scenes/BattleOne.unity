@@ -487,6 +487,7 @@ GameObject:
   - component: {fileID: 140425413}
   - component: {fileID: 140425412}
   - component: {fileID: 140425415}
+  - component: {fileID: 140425419}
   - component: {fileID: 140425417}
   - component: {fileID: 140425414}
   - component: {fileID: 140425416}
@@ -668,6 +669,7 @@ MonoBehaviour:
   enemyUnitTargeting: {fileID: 0}
   gunshot: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
   boom: {fileID: 8300000, guid: 29169d15d6fed419d9f93306bfda0747, type: 3}
+  levelOfUnit: 3
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   enemyUnits: []
@@ -768,6 +770,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &140425419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140425411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 850dbdfb792e94c13bc93c15c8654bde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
+  health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
+  unitLevel: 1
 --- !u!1 &143363706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1440,6 +1457,7 @@ GameObject:
   - component: {fileID: 385155613}
   - component: {fileID: 385155618}
   - component: {fileID: 385155619}
+  - component: {fileID: 385155620}
   m_Layer: 0
   m_Name: UnitLevel1 (2)
   m_TagString: PlayerUnit
@@ -1617,6 +1635,7 @@ MonoBehaviour:
   enemyUnitTargeting: {fileID: 0}
   gunshot: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
   boom: {fileID: 8300000, guid: 29169d15d6fed419d9f93306bfda0747, type: 3}
+  levelOfUnit: 1
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   enemyUnits: []
@@ -1717,6 +1736,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &385155620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385155612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 850dbdfb792e94c13bc93c15c8654bde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
+  health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
+  unitLevel: 1
 --- !u!1 &417137182
 GameObject:
   m_ObjectHideFlags: 0
@@ -1865,6 +1899,7 @@ GameObject:
   - component: {fileID: 467317345}
   - component: {fileID: 467317344}
   - component: {fileID: 467317350}
+  - component: {fileID: 467317351}
   m_Layer: 0
   m_Name: UnitLevel1 (4)
   m_TagString: PlayerUnit
@@ -1889,6 +1924,7 @@ MonoBehaviour:
   enemyUnitTargeting: {fileID: 0}
   gunshot: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
   boom: {fileID: 8300000, guid: 29169d15d6fed419d9f93306bfda0747, type: 3}
+  levelOfUnit: 1
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   enemyUnits: []
@@ -2142,6 +2178,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &467317351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467317343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 850dbdfb792e94c13bc93c15c8654bde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
+  health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
+  unitLevel: 1
 --- !u!1 &474289259
 GameObject:
   m_ObjectHideFlags: 0
@@ -2450,7 +2501,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &598895785
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2557,6 +2608,7 @@ GameObject:
   m_Component:
   - component: {fileID: 619509203}
   - component: {fileID: 619509202}
+  - component: {fileID: 619509210}
   - component: {fileID: 619509207}
   - component: {fileID: 619509200}
   - component: {fileID: 619509199}
@@ -2693,21 +2745,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &619509203
-Transform:
+--- !u!224 &619509203
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619509198}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.66, y: 2.33, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1.66, y: 2.33}
+  m_SizeDelta: {x: 0.73, y: 0.59}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &619509204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2720,13 +2776,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dd66a7da6c9d4bf9af3ae03ff9d6b09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allPlayerUnits: []
   targetX: 0
   targetY: 0
   gunshot: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
   boom: {fileID: 8300000, guid: 29169d15d6fed419d9f93306bfda0747, type: 3}
+  levelOfUnit: 1
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
-  playerUnits: []
   PlayerBullet1: {fileID: 1895591220503798199, guid: 6c7d247398e564413a9ffa926789b3da, type: 3}
 --- !u!114 &619509207
 MonoBehaviour:
@@ -2735,23 +2792,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619509198}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a523080fec7049f2957cbc755e2b952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 3
-  connectedBar: {fileID: 853402796}
-  enemy_ship_healthbar: {fileID: 0}
-  enemy_ship_health: 150
-  level_1_ship_health: 150
-  healthbar_enemy_unit_1: {fileID: 953644647}
-  healthbar_enemy_unit_2: {fileID: 953644647}
-  healthbar_enemy_unit_3: {fileID: 953644647}
-  enemy_unit_1_health: 10
-  enemy_unit_2_health: 10
-  enemy_unit_3_health: 10
-  level_1_unit_health: 10
 --- !u!82 &619509208
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2848,6 +2893,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &619509210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619509198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc705d40c2bc42f5970cb152cfcaf16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
+  health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
+  unitLevel: 0
 --- !u!1 &675064402
 GameObject:
   m_ObjectHideFlags: 0
@@ -4410,7 +4470,9 @@ MonoBehaviour:
   numEnemies: 0
   numChecked: 0
   numDestroyed: 0
+  numPlayersDestroyed: 0
   isWon: 0
+  isLost: 0
 --- !u!4 &1173592421
 Transform:
   m_ObjectHideFlags: 0
@@ -4759,6 +4821,7 @@ GameObject:
   - component: {fileID: 1253014651}
   - component: {fileID: 1253014656}
   - component: {fileID: 1253014657}
+  - component: {fileID: 1253014658}
   m_Layer: 0
   m_Name: UnitLevel1 (3)
   m_TagString: PlayerUnit
@@ -4936,6 +4999,7 @@ MonoBehaviour:
   enemyUnitTargeting: {fileID: 0}
   gunshot: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
   boom: {fileID: 8300000, guid: 29169d15d6fed419d9f93306bfda0747, type: 3}
+  levelOfUnit: 1
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   enemyUnits: []
@@ -5036,6 +5100,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1253014658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253014650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 850dbdfb792e94c13bc93c15c8654bde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
+  health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
+  unitLevel: 1
 --- !u!1 &1260805134
 GameObject:
   m_ObjectHideFlags: 0
@@ -5392,6 +5471,7 @@ GameObject:
   - component: {fileID: 1423621297}
   - component: {fileID: 1423621299}
   - component: {fileID: 1423621300}
+  - component: {fileID: 1423621301}
   m_Layer: 0
   m_Name: EnemyUnit2
   m_TagString: EnemyUnit
@@ -5550,13 +5630,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dd66a7da6c9d4bf9af3ae03ff9d6b09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allPlayerUnits: []
   targetX: 0
   targetY: 0
   gunshot: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
   boom: {fileID: 8300000, guid: 29169d15d6fed419d9f93306bfda0747, type: 3}
+  levelOfUnit: 1
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
-  playerUnits: []
   PlayerBullet1: {fileID: 1895591220503798199, guid: 6c7d247398e564413a9ffa926789b3da, type: 3}
 --- !u!114 &1423621299
 MonoBehaviour:
@@ -5565,23 +5646,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1423621291}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a523080fec7049f2957cbc755e2b952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 3
-  connectedBar: {fileID: 1868773538}
-  enemy_ship_healthbar: {fileID: 0}
-  enemy_ship_health: 150
-  level_1_ship_health: 150
-  healthbar_enemy_unit_1: {fileID: 1346237325}
-  healthbar_enemy_unit_2: {fileID: 1346237325}
-  healthbar_enemy_unit_3: {fileID: 1346237325}
-  enemy_unit_1_health: 10
-  enemy_unit_2_health: 10
-  enemy_unit_3_health: 10
-  level_1_unit_health: 10
 --- !u!82 &1423621300
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5678,6 +5747,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1423621301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423621291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc705d40c2bc42f5970cb152cfcaf16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
+  health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
+  unitLevel: 0
 --- !u!1 &1481270088
 GameObject:
   m_ObjectHideFlags: 0
@@ -6381,6 +6465,7 @@ GameObject:
   - component: {fileID: 1931795745}
   - component: {fileID: 1931795750}
   - component: {fileID: 1931795751}
+  - component: {fileID: 1931795752}
   m_Layer: 0
   m_Name: UnitLevel1 (1)
   m_TagString: PlayerUnit
@@ -6558,6 +6643,7 @@ MonoBehaviour:
   enemyUnitTargeting: {fileID: 0}
   gunshot: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
   boom: {fileID: 8300000, guid: 29169d15d6fed419d9f93306bfda0747, type: 3}
+  levelOfUnit: 1
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   enemyUnits: []
@@ -6658,6 +6744,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1931795752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931795744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 850dbdfb792e94c13bc93c15c8654bde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
+  health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
+  unitLevel: 1
 --- !u!1 &1938267360
 GameObject:
   m_ObjectHideFlags: 0
@@ -6673,6 +6774,7 @@ GameObject:
   - component: {fileID: 1938267366}
   - component: {fileID: 1938267368}
   - component: {fileID: 1938267369}
+  - component: {fileID: 1938267370}
   m_Layer: 0
   m_Name: EnemyUnit3
   m_TagString: EnemyUnit
@@ -6831,13 +6933,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dd66a7da6c9d4bf9af3ae03ff9d6b09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allPlayerUnits: []
   targetX: 0
   targetY: 0
   gunshot: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
   boom: {fileID: 8300000, guid: 29169d15d6fed419d9f93306bfda0747, type: 3}
+  levelOfUnit: 1
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
-  playerUnits: []
   PlayerBullet1: {fileID: 1895591220503798199, guid: 6c7d247398e564413a9ffa926789b3da, type: 3}
 --- !u!114 &1938267368
 MonoBehaviour:
@@ -6846,23 +6949,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1938267360}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a523080fec7049f2957cbc755e2b952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 3
-  connectedBar: {fileID: 735659392}
-  enemy_ship_healthbar: {fileID: 0}
-  enemy_ship_health: 150
-  level_1_ship_health: 150
-  healthbar_enemy_unit_1: {fileID: 300273808}
-  healthbar_enemy_unit_2: {fileID: 300273808}
-  healthbar_enemy_unit_3: {fileID: 300273808}
-  enemy_unit_1_health: 10
-  enemy_unit_2_health: 10
-  enemy_unit_3_health: 10
-  level_1_unit_health: 10
 --- !u!82 &1938267369
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6959,6 +7050,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1938267370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938267360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc705d40c2bc42f5970cb152cfcaf16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
+  health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
+  unitLevel: 0
 --- !u!1 &2096458886
 GameObject:
   m_ObjectHideFlags: 0
@@ -7185,9 +7291,9 @@ SceneRoots:
   - {fileID: 385155617}
   - {fileID: 1253014655}
   - {fileID: 467317349}
-  - {fileID: 1938267365}
-  - {fileID: 1423621296}
   - {fileID: 619509203}
+  - {fileID: 1423621296}
+  - {fileID: 1938267365}
   - {fileID: 598895785}
   - {fileID: 679272877}
   - {fileID: 1521876155}

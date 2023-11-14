@@ -88,7 +88,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c14456ad6ed8e484689c54c588125fa4, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 6848454615969928347}
   m_Layer: 5
   m_Name: Health Slider Green
-  m_TagString: Untagged
+  m_TagString: HealthImage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

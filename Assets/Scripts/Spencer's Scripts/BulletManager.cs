@@ -17,18 +17,19 @@ public class BulletManager : MonoBehaviour
 
     void Update ()
     {
+        //Moves towards the target direction in the Targeting script
         projectileDirection = new Vector2(enemyX, enemyY);
         transform.position = Vector2.MoveTowards(transform.position, projectileDirection, bulletSpeed * Time.deltaTime);
         if(this.gameObject.transform.position.x == enemyX && this.gameObject.transform.position.y == enemyY)
         {
-            //Destroy(this.gameObject);
+            //Destroys the bullet if it has reached it's target without colliding with anything
             this.gameObject.SetActive(false);
         }
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-       //Destroy(this.gameObject);
+       //Destroyes the bullet when it collides with something
        this.gameObject.SetActive(false);
     }
 }

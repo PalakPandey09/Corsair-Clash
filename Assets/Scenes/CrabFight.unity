@@ -387,7 +387,9 @@ MonoBehaviour:
   numEnemies: 0
   numChecked: 0
   numDestroyed: 0
+  numPlayersDestroyed: 0
   isWon: 0
+  isLost: 0
   body: {fileID: 816736385}
   claws: []
   bodyHealth: {fileID: 735659392}
@@ -566,6 +568,7 @@ GameObject:
   - component: {fileID: 140425414}
   - component: {fileID: 140425416}
   - component: {fileID: 140425418}
+  - component: {fileID: 140425419}
   m_Layer: 0
   m_Name: UnitLevel1
   m_TagString: PlayerUnit
@@ -743,6 +746,7 @@ MonoBehaviour:
   enemyUnitTargeting: {fileID: 0}
   gunshot: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
   boom: {fileID: 8300000, guid: 29169d15d6fed419d9f93306bfda0747, type: 3}
+  levelOfUnit: 1
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   enemyUnits: []
@@ -843,6 +847,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &140425419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140425411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 850dbdfb792e94c13bc93c15c8654bde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
+  health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
+  unitLevel: 1
 --- !u!1 &143363706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1766,6 +1785,7 @@ GameObject:
   - component: {fileID: 385155613}
   - component: {fileID: 385155618}
   - component: {fileID: 385155619}
+  - component: {fileID: 385155620}
   m_Layer: 0
   m_Name: UnitLevel1 (2)
   m_TagString: PlayerUnit
@@ -1943,6 +1963,7 @@ MonoBehaviour:
   enemyUnitTargeting: {fileID: 0}
   gunshot: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
   boom: {fileID: 8300000, guid: 29169d15d6fed419d9f93306bfda0747, type: 3}
+  levelOfUnit: 1
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   enemyUnits: []
@@ -2043,6 +2064,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &385155620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385155612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 850dbdfb792e94c13bc93c15c8654bde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
+  health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
+  unitLevel: 1
 --- !u!1 &417137182
 GameObject:
   m_ObjectHideFlags: 0
@@ -2191,6 +2227,7 @@ GameObject:
   - component: {fileID: 467317345}
   - component: {fileID: 467317344}
   - component: {fileID: 467317350}
+  - component: {fileID: 467317351}
   m_Layer: 0
   m_Name: UnitLevel1 (4)
   m_TagString: PlayerUnit
@@ -2215,6 +2252,7 @@ MonoBehaviour:
   enemyUnitTargeting: {fileID: 0}
   gunshot: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
   boom: {fileID: 8300000, guid: 29169d15d6fed419d9f93306bfda0747, type: 3}
+  levelOfUnit: 1
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   enemyUnits: []
@@ -2468,6 +2506,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &467317351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467317343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 850dbdfb792e94c13bc93c15c8654bde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
+  health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
+  unitLevel: 1
 --- !u!1 &474289259
 GameObject:
   m_ObjectHideFlags: 0
@@ -2945,7 +2998,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &598895785
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3057,6 +3110,7 @@ GameObject:
   - component: {fileID: 642821710}
   - component: {fileID: 642821714}
   - component: {fileID: 642821715}
+  - component: {fileID: 642821716}
   m_Layer: 0
   m_Name: Claw 2
   m_TagString: EnemyUnit
@@ -3076,8 +3130,7 @@ Transform:
   m_LocalPosition: {x: 3.5437784, y: 3.537132, z: 0}
   m_LocalScale: {x: 0.75489527, y: 0.64309406, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 689691346}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -193.946}
 --- !u!114 &642821708
@@ -3336,23 +3389,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642821706}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a523080fec7049f2957cbc755e2b952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1.5
-  connectedBar: {fileID: 1868773538}
-  enemy_ship_healthbar: {fileID: 0}
-  enemy_ship_health: 150
-  level_1_ship_health: 150
-  healthbar_enemy_unit_1: {fileID: 1346237325}
-  healthbar_enemy_unit_2: {fileID: 1346237325}
-  healthbar_enemy_unit_3: {fileID: 1346237325}
-  enemy_unit_1_health: 10
-  enemy_unit_2_health: 10
-  enemy_unit_3_health: 10
-  level_1_unit_health: 10
 --- !u!82 &642821715
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3373,7 +3414,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.5468874
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -3449,6 +3490,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &642821716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642821706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc705d40c2bc42f5970cb152cfcaf16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
+  health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
+  unitLevel: 3
 --- !u!1 &679272873
 GameObject:
   m_ObjectHideFlags: 0
@@ -3709,12 +3765,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 689691345}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.9516705, y: 0.30712083, z: -0, w: 0}
-  m_LocalPosition: {x: -0.1946, y: 1.6982, z: 0}
-  m_LocalScale: {x: 2.0669315, y: 0.4264212, z: 1}
+  m_LocalRotation: {x: 0.1893151, y: -0.9819165, z: -0, w: 0}
+  m_LocalPosition: {x: 2.5155017, y: 0.6643717, z: 0.018162966}
+  m_LocalScale: {x: 1.0513177, y: 0.2088633, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 642821707}
+  m_Father: {fileID: 1302879630}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -21.825}
 --- !u!212 &689691347
 SpriteRenderer:
@@ -4298,6 +4354,7 @@ GameObject:
   - component: {fileID: 816736391}
   - component: {fileID: 816736392}
   - component: {fileID: 816736393}
+  - component: {fileID: 816736394}
   m_Layer: 0
   m_Name: CrabBody
   m_TagString: EnemyUnit
@@ -4411,18 +4468,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a523080fec7049f2957cbc755e2b952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
-  connectedBar: {fileID: 735659392}
-  enemy_ship_healthbar: {fileID: 0}
-  enemy_ship_health: 150
-  level_1_ship_health: 150
-  healthbar_enemy_unit_1: {fileID: 300273808}
-  healthbar_enemy_unit_2: {fileID: 300273808}
-  healthbar_enemy_unit_3: {fileID: 300273808}
-  enemy_unit_1_health: 10
-  enemy_unit_2_health: 10
-  enemy_unit_3_health: 10
-  level_1_unit_health: 10
 --- !u!70 &816736391
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4470,13 +4515,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dd66a7da6c9d4bf9af3ae03ff9d6b09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allPlayerUnits: []
   targetX: 0
   targetY: 0
   gunshot: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
   boom: {fileID: 8300000, guid: 29169d15d6fed419d9f93306bfda0747, type: 3}
+  levelOfUnit: 1
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
-  playerUnits: []
   PlayerBullet1: {fileID: 0}
 --- !u!82 &816736393
 AudioSource:
@@ -4574,6 +4620,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &816736394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816736385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc705d40c2bc42f5970cb152cfcaf16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
+  health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
+  unitLevel: 3
 --- !u!1 &832075490
 GameObject:
   m_ObjectHideFlags: 0
@@ -5903,6 +5964,7 @@ GameObject:
   - component: {fileID: 1253014651}
   - component: {fileID: 1253014656}
   - component: {fileID: 1253014657}
+  - component: {fileID: 1253014658}
   m_Layer: 0
   m_Name: UnitLevel1 (3)
   m_TagString: PlayerUnit
@@ -6080,6 +6142,7 @@ MonoBehaviour:
   enemyUnitTargeting: {fileID: 0}
   gunshot: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
   boom: {fileID: 8300000, guid: 29169d15d6fed419d9f93306bfda0747, type: 3}
+  levelOfUnit: 1
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   enemyUnits: []
@@ -6180,6 +6243,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1253014658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253014650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 850dbdfb792e94c13bc93c15c8654bde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
+  health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
+  unitLevel: 1
 --- !u!1 &1260805134
 GameObject:
   m_ObjectHideFlags: 0
@@ -6373,6 +6451,8 @@ Transform:
   - {fileID: 218134745}
   - {fileID: 348245879}
   - {fileID: 1651805954}
+  - {fileID: 1620713735}
+  - {fileID: 689691346}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1306232872
@@ -6996,12 +7076,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1620713734}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.9516705, y: 0.30712083, z: -0, w: 0}
-  m_LocalPosition: {x: -0.1946, y: 1.6982, z: 0}
-  m_LocalScale: {x: 2.0669315, y: 0.4264212, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.18931259, w: 0.9819169}
+  m_LocalPosition: {x: 0.5113121, y: 0.6643729, z: 0.018162966}
+  m_LocalScale: {x: 1.0513172, y: 0.20886318, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2050684957}
+  m_Father: {fileID: 1302879630}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -21.825}
 --- !u!212 &1620713736
 SpriteRenderer:
@@ -7689,6 +7769,7 @@ GameObject:
   - component: {fileID: 1931795745}
   - component: {fileID: 1931795750}
   - component: {fileID: 1931795751}
+  - component: {fileID: 1931795752}
   m_Layer: 0
   m_Name: UnitLevel1 (1)
   m_TagString: PlayerUnit
@@ -7866,6 +7947,7 @@ MonoBehaviour:
   enemyUnitTargeting: {fileID: 0}
   gunshot: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
   boom: {fileID: 8300000, guid: 29169d15d6fed419d9f93306bfda0747, type: 3}
+  levelOfUnit: 1
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   enemyUnits: []
@@ -7966,6 +8048,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1931795752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931795744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 850dbdfb792e94c13bc93c15c8654bde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
+  health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
+  unitLevel: 1
 --- !u!1 &1950959523
 GameObject:
   m_ObjectHideFlags: 0
@@ -8234,6 +8331,7 @@ GameObject:
   - component: {fileID: 2050684961}
   - component: {fileID: 2050684960}
   - component: {fileID: 2050684964}
+  - component: {fileID: 2050684965}
   m_Layer: 0
   m_Name: 'Claw 1 '
   m_TagString: EnemyUnit
@@ -8253,8 +8351,7 @@ Transform:
   m_LocalPosition: {x: 0.471591, y: 3.537132, z: 0}
   m_LocalScale: {x: 0.75489485, y: 0.6430938, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1620713735}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: -193.946}
 --- !u!114 &2050684958
@@ -8513,23 +8610,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2050684956}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a523080fec7049f2957cbc755e2b952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1.5
-  connectedBar: {fileID: 853402796}
-  enemy_ship_healthbar: {fileID: 0}
-  enemy_ship_health: 150
-  level_1_ship_health: 150
-  healthbar_enemy_unit_1: {fileID: 953644647}
-  healthbar_enemy_unit_2: {fileID: 953644647}
-  healthbar_enemy_unit_3: {fileID: 953644647}
-  enemy_unit_1_health: 10
-  enemy_unit_2_health: 10
-  enemy_unit_3_health: 10
-  level_1_unit_health: 10
 --- !u!82 &2050684964
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8626,6 +8711,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2050684965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050684956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc705d40c2bc42f5970cb152cfcaf16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
+  health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
+  unitLevel: 3
 --- !u!1 &2096458886
 GameObject:
   m_ObjectHideFlags: 0

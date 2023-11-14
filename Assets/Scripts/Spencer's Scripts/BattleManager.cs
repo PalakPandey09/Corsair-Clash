@@ -17,9 +17,12 @@ public class BattleManager : MonoBehaviour
     public int numEnemies = 0;
     public int numChecked = 0;
     public int numDestroyed = 0;
+    public int numPlayersDestroyed = 0;
     public int isWon = 0;
+    public int isLost = 0;
     private void Awake()
     {
+        //Makes sure only one instance is active
         if (instance == null)
             instance = this;
     }
@@ -27,6 +30,7 @@ public class BattleManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Activates the place units menu
         startBattle.SetActive(false);
         endBattle.enabled = false;
         playerUnits = GameObject.FindGameObjectsWithTag("PlayerUnit");
@@ -39,6 +43,7 @@ public class BattleManager : MonoBehaviour
     void Update()
     {
         numChecked = 0;
+        //Once all player units are set, it sets the start battle button to active
         foreach(GameObject unit in playerUnits){
             if(unit.transform.position.x < 4){
                 numChecked = numChecked + 1;
@@ -50,10 +55,15 @@ public class BattleManager : MonoBehaviour
         if(numChecked != numUnits) {
             startBattle.SetActive(false);
         }
+        //If all enemies are destroyed before the player units are, sets the win condition to true.
         if(numEnemies == numDestroyed && isBossFight == false)
         {
             isWon = 1;
-            //ChangeScene();
+        }
+        //If all player units are destroyed before the enemy units are, quits the application.
+        if(numUnits == numPlayersDestroyed)
+        {
+            Application.Quit();
         }
     }
 
@@ -63,7 +73,7 @@ public class BattleManager : MonoBehaviour
         endBattle.enabled = true;
         startEnemyFiring = true;
     }
-
+    //This virtual method has a base scene change of the overworld map after a battle
     public virtual void ChangeScene()
     {
         SceneManager.LoadScene("OverworldMapPostBattle");
