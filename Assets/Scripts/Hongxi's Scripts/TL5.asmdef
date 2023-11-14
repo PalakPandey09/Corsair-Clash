@@ -1,7 +1,7 @@
 {
-    "name": "TL2",
+    "name": "TL5",
     "rootNamespace": "",
-    "references": ["TL5"],
+    "references": [""],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

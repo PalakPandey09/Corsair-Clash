@@ -1,69 +1,43 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyGenerationSystem: MonoBehaviour {
-   private static OverworldEnemyGenerationSystem mInstance;
 
-   public static OverworldEnemyGenerationSystem Instance {
+public class EnemyGenerationSystem: MonoBehaviour {
+   private static EnemyGenerationSystem mInstance;
+
+   public static EnemyGenerationSystem Instance {
       get {
          if(mInstance == null) {
 
-            mInstance = new OverworldEnemyGenerationSystem();
+            mInstance = new EnemyGenerationSystem();
          }
 
          return mInstance;
       }
    }
 
-   public GameObject enemyShipObject;
-   public GameObject overWorldMap;
-   public Dictionary<Vector3, Vector2> allEnemyPosandAttriRange = new Dictionary<Vector3, Vector2>();
-   public static List<enemyShipUnit> allEnemyShipUnits = new List<enemyShipUnit>();
-   public void Generate() {
-      allEnemyPosandAttriRange.Add(new Vector3(1f, 2f, 3f), new Vector2(5f, 6f));
-      allEnemyPosandAttriRange.Add(new Vector3(2f, 3f, 4f), new Vector2(6f, 7f));
-      allEnemyPosandAttriRange.Add(new Vector3(3f, 4f, 5f), new Vector2(7f, 8f));
-      allEnemyShipUnits.Add(new enemyShipUnit {
-         allUnits = new List<enemyUnit>() {
-            new enemyUnit(),
-            new enemyUnit()
-         }
-      });
-      allEnemyShipUnits.Add(new enemyShipUnit {
-         allUnits = new List<enemyUnit>(){
-            new enemyUnit(),
-            new enemyUnit(),
-            new enemyUnit()
-         }
-      });
-      allEnemyShipUnits.Add(new enemyShipUnit {
-         allUnits = new List<enemyUnit>(){
-            new enemyUnit()
-         }
-      });
+   public List<GameObject> EnemyShips = new List<GameObject>();
 
+   public GameObject enemyShipParent;
+
+   private void Start() {
+      enemyShipParent = GameObject.FindGameObjectWithTag("EnemyShipParent");
+
+      if(enemyShipParent == null) {
+         enemyShipParent = new GameObject();
+         enemyShipParent.tag = "EnemyShipParent";
+      }
+
+      GenerateEnemies();
+   }
+
+   public void GenerateEnemies() {
       var index = 0;
-      foreach(var pa in allEnemyPosandAttriRange) {
-         var temp = Instantiate(enemyShipObject, pa.Key, Quaternion.Euler(0, 0, 0), overWorldMap.transform);
-
-         assignEnemyAttri(allEnemyShipUnits[index], pa.Value);
-         index++;
+      //foreach
+      for(; index < EnemyShips.Count; index++) {
+         if(EnemyShips[index] != null) {
+            Instantiate(EnemyShips[index], enemyShipParent.transform);
+         }
       }
-   }
-
-   public void assignEnemyAttri(enemyShipUnit enemyShipUnit, Vector2 attriInterval) {
-      //Assign Attributes to all Enemies in every ship
-      //Call EnemyList in Ship Class maybe
-
-      foreach(var e in enemyShipUnit.allUnits) {
-         e.attri = Random.Range(attriInterval.x, attriInterval.y);
-      }
-   }
-   public class enemyShipUnit {
-      public List<enemyUnit> allUnits;
-   }
-
-   public class enemyUnit {
-      public float attri;
    }
 }

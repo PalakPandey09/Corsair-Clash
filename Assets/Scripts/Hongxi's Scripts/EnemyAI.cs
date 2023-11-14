@@ -1,49 +1,40 @@
-using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.Pool;
 
-public class EnemyAI: MonoBehaviour {
-   private enum Status {
-      Die = 0,
-      Attacking = 1,
-      Targeting = 10,
-   }
-   void Start(){
-      status = Status.Attacking;
-      Target();
-      Attack(target);
+public class EnemyAI: UnitAI {
+   //public BattleManager battleManager;
+   protected Status status;
+   //Change GameObject to PlayerUnit after PlayerUnit implemented
+   public List<GameObject> allPlayerUnits;
+
+   public void Start() {
+      status = Status.Targeting;
       //InvokeRepeating("Attack", 3.0f, 3.0f);
    }
-   //public BattleManager battleManager;
-   private Status status;
-   //Change GameObject to PlayerUnit after PlayerUnit implemented
-   public GameObject target= new GameObject();
-   public GameObject[] allPlayerUnits;
 
    // <summary>
    // One of Strategy can be taken by Enemy Unit.
-   // Select a player unit as attack target.
+   // Find all player units can be attacked.
    // </summary>
-   public void Target() {
-      if(target == null && status == Status.Attacking) {
+   public override GameObject Target() {
+      //Could Add Delay
 
-         status = Status.Targeting;
+      allPlayerUnits = GameObject.FindGameObjectsWithTag("PlayerUnit").ToList<GameObject>();
 
-         //Could Add Delay
-         
-      GameObject playerUnit1 = new GameObject();
-      GameObject playerUnit2 = new GameObject();
-      playerUnit1.tag = "PlayerUnit";
-      playerUnit2.tag = "PlayerUnit";
-
-         allPlayerUnits = GameObject.FindGameObjectsWithTag("PlayerUnit");
-
-         if(allPlayerUnits.Length > 0) {
-            // target = allPlayerUnits[Random.Range(0, allPlayerUnits.Length+1)];
-            // target=playerUnit1;
-         }
+      //Only For Test
+      if(allPlayerUnits.Count == 0) {
+         var playerUnit1 = new GameObject();
+         var playerUnit2 = new GameObject();
+         playerUnit1.tag = "PlayerUnit";
+         playerUnit2.tag = "PlayerUnit";
+         allPlayerUnits = GameObject.FindGameObjectsWithTag("PlayerUnit").ToList<GameObject>();
       }
-      return;
+
+      status = Status.Attacking;
+
+      return allPlayerUnits[Random.Range(0, allPlayerUnits.Count)];
    }
 
    // <summary>
@@ -51,14 +42,10 @@ public class EnemyAI: MonoBehaviour {
    // Attack given target variable.
    // </summary>
    // <param name="target"></param>
-   private void Attack(GameObject target) {
-      if(target != null) {
-         //Send Message or Has Reference to Player Unit and call TakeDamage
-         Debug.Log(gameObject.name + " EnemyUnit Attack!: " + target.name);
-      }
-      if(target == null) {
-         Debug.Log("No Target");
-      }
+   public override void Attack(float targetX, float targetY, GameObject bullet) {
+      bullet.transform.position = new Vector2(this.transform.position.x, this.transform.position.y - 0.4f);
+      bullet.transform.rotation = Quaternion.Euler(new Vector3(targetX, targetY, 0));
+      bullet.SetActive(true);
    }
 
 }

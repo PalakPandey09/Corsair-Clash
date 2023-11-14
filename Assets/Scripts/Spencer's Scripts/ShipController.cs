@@ -33,7 +33,6 @@ public class ShipControls : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
-        Debug.Log("Collided with Something");
         if(other.gameObject.CompareTag("Enemy")) {
             battleButton.SetActive(true);
         }

@@ -1,6 +1,14 @@
 using System;
 
 namespace QPFramework {
+   /// <summary>
+   /// A simple responsible variable
+   /// </summary>
+   /// the purpose and character of your use - School Learning
+   /// the nature of the copyrighted work - Opensource MIT
+   /// the amount and substantiality of the portion taken - Small Utility Part
+   /// the effect of use upon the potential market - No Competition
+   /// <typeparam name="T"></typeparam>
    public class EventVariable<T> {
       public EventVariable(T defaultValue = default(T)) {
          mValue = defaultValue;
