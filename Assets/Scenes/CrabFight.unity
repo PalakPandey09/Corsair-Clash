@@ -387,6 +387,7 @@ MonoBehaviour:
   numEnemies: 0
   numChecked: 0
   numDestroyed: 0
+  isWon: 0
   body: {fileID: 816736385}
   claws: []
   bodyHealth: {fileID: 735659392}
@@ -3050,7 +3051,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 642821707}
-  - component: {fileID: 642821713}
   - component: {fileID: 642821709}
   - component: {fileID: 642821708}
   - component: {fileID: 642821711}
@@ -3329,26 +3329,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!114 &642821713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 642821706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dd66a7da6c9d4bf9af3ae03ff9d6b09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetX: 0
-  targetY: 0
-  gunshot: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
-  boom: {fileID: 8300000, guid: 29169d15d6fed419d9f93306bfda0747, type: 3}
-  foundTarget: 0
-  PlaceUnitsCanvas: {fileID: 679272876}
-  playerUnits: []
-  PlayerBullet1: {fileID: 0}
 --- !u!114 &642821714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7458,6 +7438,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1863140536
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1863140538}
+  - component: {fileID: 1863140537}
+  m_Layer: 0
+  m_Name: FightSceneController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1863140537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863140536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 399ac4cedfe834220a871b8d826a8826, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battleManager: {fileID: 72383880}
+--- !u!4 &1863140538
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863140536}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.6254733, y: 3.0473294, z: -0.047339782}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1868773538
 GameObject:
   m_ObjectHideFlags: 0
@@ -8204,7 +8229,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2050684957}
   - component: {fileID: 2050684962}
-  - component: {fileID: 2050684963}
   - component: {fileID: 2050684959}
   - component: {fileID: 2050684958}
   - component: {fileID: 2050684961}
@@ -8506,26 +8530,6 @@ MonoBehaviour:
   enemy_unit_2_health: 10
   enemy_unit_3_health: 10
   level_1_unit_health: 10
---- !u!114 &2050684963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2050684956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dd66a7da6c9d4bf9af3ae03ff9d6b09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetX: 0
-  targetY: 0
-  gunshot: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
-  boom: {fileID: 8300000, guid: 29169d15d6fed419d9f93306bfda0747, type: 3}
-  foundTarget: 0
-  PlaceUnitsCanvas: {fileID: 679272876}
-  playerUnits: []
-  PlayerBullet1: {fileID: 0}
 --- !u!82 &2050684964
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8756,6 +8760,7 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1863140538}
   - {fileID: 72383879}
   - {fileID: 970784610}
   - {fileID: 140425413}

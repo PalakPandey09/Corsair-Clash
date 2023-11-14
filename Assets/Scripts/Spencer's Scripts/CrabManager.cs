@@ -44,7 +44,8 @@ public class CrabManager : BattleManager
         }
         if(numDestroyed == 3)
         {
-            ChangeScene();
+            isWon = 1;
+            //ChangeScene();
         }
     }
 

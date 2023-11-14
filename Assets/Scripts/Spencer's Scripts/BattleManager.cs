@@ -17,6 +17,7 @@ public class BattleManager : MonoBehaviour
     public int numEnemies = 0;
     public int numChecked = 0;
     public int numDestroyed = 0;
+    public int isWon = 0;
     private void Awake()
     {
         if (instance == null)
@@ -51,7 +52,8 @@ public class BattleManager : MonoBehaviour
         }
         if(numEnemies == numDestroyed && isBossFight == false)
         {
-            ChangeScene();
+            isWon = 1;
+            //ChangeScene();
         }
     }
 
