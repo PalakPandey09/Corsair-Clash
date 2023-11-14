@@ -1,32 +1,89 @@
 using System.Collections;
 using System.Collections.Generic;
+using log4net.Core;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class player_health_manager : MonoBehaviour
-{ 
-    //script input values for damage
-    public float damage;
+{
+    //class that creates enemies with their level appropriate health bars
+    public class player_health_bar
+    {   
+        //audio source
+        private AudioSource audioSource;
+        //establishes the canvas that the image will fill
+        private GameObject canvas;
+        // Load the image from prefab folder
+        Image health_bar = Resources.Load("Assets/Resources/health_bar.prefab") as Image;
+        
+        
+        //enemy health to be assigned
+        private float player_health;
+        //determines what unit level health is assigned
+        public int unit_levels;
+        //keeps track current unit level;
+        private float current_level;
+        //unit health per current unit health
+        private float unit_1 = 10f;
+        private float unit_2 = 15f;
+        private float unit_3 = 20f;
+        private float unit_4 = 25f;
+        private float unit_5 = 30f;
+        
+        public void unit_health()
+        { 
+            //switch statement checks for current player health
+            //and then assigns its health in accordance to each level
+            switch (unit_levels)
+            {
+                case ( > 0) when unit_levels == 1:
+                    player_health = unit_1;
+                    current_level = unit_1;
+                    break;
+                case ( > 0) when unit_levels == 2:
+                    player_health = unit_2;
+                    current_level = unit_2;
+                    break;
+                case ( > 0) when unit_levels == 3:
+                    player_health = unit_3;
+                    current_level = unit_3;
+                    break;
+                case ( > 0) when unit_levels == 4:
+                    player_health = unit_4;
+                    current_level = unit_4;
+                    break;
+                case ( > 0) when unit_levels == 5:
+                    player_health = unit_5;
+                    current_level = unit_5;
+                    break;
+            }
+            //creates a canvas, then loads the health_bar to it.
+            GameObject newCanvas = Instantiate(canvas) as GameObject;
+            Image canvas_health_bar = Instantiate(health_bar);
+            canvas_health_bar.transform.SetParent(newCanvas.transform, true);
+            
+            //removes health when unit dies
+            if(player_health <= 0)
+            {
+                audioSource.Play();
+                canvas.SetActive(false);
+            }
+            
+        }
+         
+        public void OnCollisionEnter2D(Collision2D collision)
+        {
+            //takes damage value of collision projectile
+            player_health -= collision.gameObject.GetComponent<BulletManager>().bulletDamage;
+            //updates current health
+            health_bar.fillAmount =  player_health / current_level;
+        }   
+        
+    }
     
-     //variables for player health
-    public Image player_ship_healthbar;
-    public float player_ship_health = 150f;
-    public float level_1_ship_health = 150f;
-
-    //variables for player units
-    public Image healthbar_player_unit_1;
-    public Image healthbar_player_unit_2;
-    public Image healthbar_player_unit_3;
-    public float player_unit_1_health = 10f;
-    public float player_unit_2_health = 10f;
-    public float player_unit_3_health = 10f;
-
-    public float level_1_unit_health = 10f;
-
     // Start is called before the first frame update
     void Start()
     {
-        
         
     }
 
@@ -36,31 +93,5 @@ public class player_health_manager : MonoBehaviour
         
     }
 
-    public void player_ship_takedamage_on_collision(Collision collision){
-
-        if(collision.gameObject.tag == "player_ship"){
-        player_ship_health -= damage;
-        player_ship_healthbar.fillAmount =  player_ship_health / level_1_ship_health;
-            if(player_ship_health <= 0){
-                
-            }
-        }
-
-    }
-
-    public void player_units_takedamage_on_collision(Collision collision){
-        if(collision.gameObject.tag == "player_unit_1"){
-            player_unit_1_health -= damage;
-            healthbar_player_unit_1.fillAmount = player_unit_1_health / level_1_unit_health;
-        }
-        if(collision.gameObject.tag == "player_unit_2"){
-            player_unit_1_health -= damage;
-            healthbar_player_unit_2.fillAmount = player_unit_2_health / level_1_unit_health;
-        }
-        if(collision.gameObject.tag == "player_unit_3"){
-            player_unit_1_health -= damage;
-            healthbar_player_unit_3.fillAmount = player_unit_3_health / level_1_unit_health;
-        }
-    }
-
+    
 }
