@@ -45,7 +45,6 @@ public class PlayerUnitTargeting : MonoBehaviour
         //enemyUnitTargeting = null;
         audioSource.volume = 0.5f;
         float randomChance = Random.Range(0,100);
-        Debug.Log(randomChance);
         if(randomChance == 99){
             audioSource.clip = boom;
             audioSource.volume = 0.75f;
