@@ -12,7 +12,7 @@ public class PlayerUnitTargeting : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip gunshot;
     public AudioClip boom;
-    public int levelOfUnit = 1;
+    public int levelOfUnit;
     public bool foundTarget = false;
     public Canvas PlaceUnitsCanvas;
     public GameObject[] enemyUnits;
@@ -81,11 +81,19 @@ public class PlayerUnitTargeting : MonoBehaviour
         }
         else if(levelOfUnit == 2){
             bullet.GetComponentInChildren<BulletManager>().bulletDamage = 2f;
-            bullet.GetComponentInChildren<BulletManager>().bulletSpeed = 5f;
+            bullet.GetComponentInChildren<BulletManager>().bulletSpeed = 4f;
         }
         else if(levelOfUnit == 3){
-            bullet.GetComponentInChildren<BulletManager>().bulletDamage = 4f;
-            bullet.GetComponentInChildren<BulletManager>().bulletSpeed = 1.5f;
+            bullet.GetComponentInChildren<BulletManager>().bulletDamage = 3f;
+            bullet.GetComponentInChildren<BulletManager>().bulletSpeed = 5f;
+        }
+        else if(levelOfUnit == 4){
+            bullet.GetComponentInChildren<BulletManager>().bulletDamage = 7f;
+            bullet.GetComponentInChildren<BulletManager>().bulletSpeed = 2f;
+        }
+        else if(levelOfUnit == 5){
+            bullet.GetComponentInChildren<BulletManager>().bulletDamage = 10f;
+            bullet.GetComponentInChildren<BulletManager>().bulletSpeed = 1f;
         }
     }
 }

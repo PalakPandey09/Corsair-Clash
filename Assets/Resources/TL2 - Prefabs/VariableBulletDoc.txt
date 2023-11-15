@@ -1,0 +1,38 @@
+Prefab Name: VariableBullet
+
+Description: The VariableBullet prefab is a small circular GameObject with the RigidBody2D and CircleCollider2D components as well as the BulletManager script attached. The BulletManager script has built in damage and speed variables as well as variables for a target's x and y positional values that can be set when instantiated. Once these values are given the bullet will travel towards its target.
+
+1. Preparation:
+    1.1.  Create a GameObject that will fire the VariableBullet.
+
+    1.2.  Create a script that will fire the bullet and attach it to your GameObject.
+
+    1.3.  Ensure that there is another GameObject that the firing GameObject can target.
+
+2. How to use:
+    2.1. In the script that will be used to fire the bullet, within the class definition declare a GameObject for the bullet: 
+	   public GameObject VariableBullet; 
+
+    2.2. In the inspector window for your script, drag the VariableBullet prefab asset from the assets window into the slot for the new bullet GameObject.
+
+    2.3. Back in your script, instantiate the VariableBullet:   
+           Instantiate(VariableBullet, new Vector3(x,y,0), Quaternion.identity); 
+
+    2.4. Set the target x value and target y value:  
+	   VariableBullet<BulletManager>().enemyX = 20;
+
+    2.5. Set the damage and speed values:  
+	   VariableBullet<BulletManager>().bulletDamage = 1f;
+
+    The bullet will now move towards the target location with the set damage and speed values and is destroyed when it collides with another object.
+
+3. Unique Members:
+    3.1.  bulletDamage - Field: The integer damage value of the bullet.
+
+    3.2.  bulletSpeed - Field: The integer speed value of the bullet.
+
+    3.3.  enemyX - Field: The float value for the target's x value.
+
+    3.4.  enemyY - Field: The float value for the target's y value.
+
+    3.5.  projectileDirection - Field: The Vector2 combination of the target's x and y values.

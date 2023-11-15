@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
         
     }
 
+    //When a player ship collides with an enemy ship, sets the battle button to be active
     void OnCollisionEnter (Collision collision) {
         Debug.Log("Collided With Something");
         if (collision.gameObject.tag == "Enemy" ) {

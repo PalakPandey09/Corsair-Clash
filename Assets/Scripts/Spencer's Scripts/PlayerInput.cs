@@ -20,6 +20,8 @@ public class PlayerInput : MonoBehaviour
         GetBodyMovement();
     }
 
+    //Checks which directions are held down on this frame and sets the movementvector to those directions
+    //Then calls the OnMoveBody event for the ShipController
     private void GetBodyMovement()
     {
         Vector2 movementVector = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));

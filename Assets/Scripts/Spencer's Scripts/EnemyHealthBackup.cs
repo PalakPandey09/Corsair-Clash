@@ -15,6 +15,7 @@ public class EnemyHealthBackup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        canvas.SetActive(true);
         if(BattleManager.instance.isBossFight == false){
             unitLevel = this.gameObject.GetComponent<EnemyUnitTargeting>().levelOfUnit;
             if(unitLevel == 1)
@@ -32,10 +33,20 @@ public class EnemyHealthBackup : MonoBehaviour
                 enemy_health = 20f;
                 max_health = 20f;
             }
+            else if(unitLevel == 4)
+            {
+                enemy_health = 25f;
+                max_health = 25f;
+            }
+            else if(unitLevel == 5)
+            {
+                enemy_health = 30f;
+                max_health = 30f;
+            }
         }
         else if(BattleManager.instance.isBossFight == true){
-            enemy_health = 30f;
-            max_health = 30f;
+            enemy_health = 35f;
+            max_health = 35f;
         }
 
         GameObject newCanvas = Instantiate(canvas) as GameObject;

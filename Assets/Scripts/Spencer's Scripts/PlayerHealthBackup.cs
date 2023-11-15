@@ -16,6 +16,7 @@ public class PlayerHealthBackup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        canvas.SetActive(true);
         unitLevel = this.gameObject.GetComponent<PlayerUnitTargeting>().levelOfUnit;
         if(unitLevel == 1)
         {
@@ -31,6 +32,16 @@ public class PlayerHealthBackup : MonoBehaviour
         {
             player_health = 20f;
             max_health = 20f;
+        }
+        else if(unitLevel == 4)
+        {
+            player_health = 25f;
+            max_health = 25f;
+        }
+        else if(unitLevel == 5)
+        {
+            player_health = 30f;
+            max_health = 30f;
         }
         GameObject newCanvas = Instantiate(canvas) as GameObject;
         if (newCanvas != null)

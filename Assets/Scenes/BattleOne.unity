@@ -669,7 +669,7 @@ MonoBehaviour:
   enemyUnitTargeting: {fileID: 0}
   gunshot: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
   boom: {fileID: 8300000, guid: 29169d15d6fed419d9f93306bfda0747, type: 3}
-  levelOfUnit: 3
+  levelOfUnit: 1
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   enemyUnits: []
@@ -1593,7 +1593,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 61d41fa8cf111e64590afa664acb3af5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9622642, g: 0.51290494, b: 0.51290494, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1635,7 +1635,7 @@ MonoBehaviour:
   enemyUnitTargeting: {fileID: 0}
   gunshot: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
   boom: {fileID: 8300000, guid: 29169d15d6fed419d9f93306bfda0747, type: 3}
-  levelOfUnit: 1
+  levelOfUnit: 3
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   enemyUnits: []
@@ -1750,7 +1750,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
   health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
-  unitLevel: 1
+  unitLevel: 3
 --- !u!1 &417137182
 GameObject:
   m_ObjectHideFlags: 0
@@ -1924,7 +1924,7 @@ MonoBehaviour:
   enemyUnitTargeting: {fileID: 0}
   gunshot: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
   boom: {fileID: 8300000, guid: 29169d15d6fed419d9f93306bfda0747, type: 3}
-  levelOfUnit: 1
+  levelOfUnit: 5
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   enemyUnits: []
@@ -2057,7 +2057,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 61d41fa8cf111e64590afa664acb3af5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8396226, g: 0.019802418, b: 0.019802418, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2192,7 +2192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
   health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
-  unitLevel: 1
+  unitLevel: 5
 --- !u!1 &474289259
 GameObject:
   m_ObjectHideFlags: 0
@@ -2907,7 +2907,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
   health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
-  unitLevel: 0
+  unitLevel: 1
 --- !u!1 &675064402
 GameObject:
   m_ObjectHideFlags: 0
@@ -4957,7 +4957,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 61d41fa8cf111e64590afa664acb3af5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9811321, g: 0.28230685, b: 0.28230685, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4999,7 +4999,7 @@ MonoBehaviour:
   enemyUnitTargeting: {fileID: 0}
   gunshot: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
   boom: {fileID: 8300000, guid: 29169d15d6fed419d9f93306bfda0747, type: 3}
-  levelOfUnit: 1
+  levelOfUnit: 4
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   enemyUnits: []
@@ -5114,7 +5114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
   health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
-  unitLevel: 1
+  unitLevel: 4
 --- !u!1 &1260805134
 GameObject:
   m_ObjectHideFlags: 0
@@ -5593,7 +5593,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 61d41fa8cf111e64590afa664acb3af5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9529412, g: 0.7254902, b: 0.7254902, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5635,7 +5635,7 @@ MonoBehaviour:
   targetY: 0
   gunshot: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
   boom: {fileID: 8300000, guid: 29169d15d6fed419d9f93306bfda0747, type: 3}
-  levelOfUnit: 1
+  levelOfUnit: 2
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   PlayerBullet1: {fileID: 1895591220503798199, guid: 6c7d247398e564413a9ffa926789b3da, type: 3}
@@ -5761,7 +5761,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
   health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
-  unitLevel: 0
+  unitLevel: 2
 --- !u!1 &1481270088
 GameObject:
   m_ObjectHideFlags: 0
@@ -6601,7 +6601,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 61d41fa8cf111e64590afa664acb3af5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9528302, g: 0.7236116, b: 0.7236116, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6643,7 +6643,7 @@ MonoBehaviour:
   enemyUnitTargeting: {fileID: 0}
   gunshot: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
   boom: {fileID: 8300000, guid: 29169d15d6fed419d9f93306bfda0747, type: 3}
-  levelOfUnit: 1
+  levelOfUnit: 2
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   enemyUnits: []
@@ -6758,7 +6758,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
   health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
-  unitLevel: 1
+  unitLevel: 2
 --- !u!1 &1938267360
 GameObject:
   m_ObjectHideFlags: 0
@@ -6896,7 +6896,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 61d41fa8cf111e64590afa664acb3af5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9607843, g: 0.5137255, b: 0.5137255, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6938,7 +6938,7 @@ MonoBehaviour:
   targetY: 0
   gunshot: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
   boom: {fileID: 8300000, guid: 29169d15d6fed419d9f93306bfda0747, type: 3}
-  levelOfUnit: 1
+  levelOfUnit: 3
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   PlayerBullet1: {fileID: 1895591220503798199, guid: 6c7d247398e564413a9ffa926789b3da, type: 3}
@@ -7064,7 +7064,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
   health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
-  unitLevel: 0
+  unitLevel: 3
 --- !u!1 &2096458886
 GameObject:
   m_ObjectHideFlags: 0
