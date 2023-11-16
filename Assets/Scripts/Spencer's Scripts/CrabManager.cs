@@ -61,6 +61,6 @@ public class CrabManager : BattleManager
     public override void ChangeScene()
     {
         base.ChangeScene();
-        SceneManager.LoadScene("OverworldMapPostBoss");
+        SceneManager.LoadScene("postcrabfinalscene");
     }
 }
