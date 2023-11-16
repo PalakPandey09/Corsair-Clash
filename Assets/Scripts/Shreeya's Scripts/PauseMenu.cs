@@ -1,26 +1,111 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
+/*
++-----------------------+          +--------------------------+
+|       ICommand       |          |        PauseMenu         |
++-----------------------+          +--------------------------+
+| + void Execute()     |          | - delegate void Command()|
++-----------------------+          | - Command resumeCommand  |
+|                       |          | - Command pauseCommand   |
++-----------------------+          |                          |
+                                  | + void Update()          |
+                                  | + void SettingsButton()  |
+                                  | + void QuitButton()      |
+                                  | + void Resume()          |
+                                  | + void Pause()           |
+                                  +--------------------------+
+          /\                                   /\
+          |                                    |
++------------------+                 +------------------+
+| ResumeCommand    |                 | PauseCommand     |
++------------------+                 +------------------+
+| + PauseMenu menuUI|                 | + PauseMenu menuUI|
++------------------+                 +------------------+
+| + void Execute() |                 | + void Execute()  |
++------------------+                 +------------------+
+
+*/
+
+
+public interface ICommand
+{
+    void Execute();
+}
 
 public class PauseMenu : MonoBehaviour
 {
-    public GameObject PausePanel;
+    public static bool GameIsPaused = false;
+
+    public GameObject pauseMenuUI;
+
+    private delegate void Command();
+
+    private Command resumeCommand;
+    private Command pauseCommand;
+
+    private void Start()
+    {
+        // Initialize commands with the appropriate methods
+        resumeCommand = Resume;
+        pauseCommand = Pause;
+    }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (GameIsPaused)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
+        }
+    }
+
+    public void SettingsButton()
+    {
+        Debug.Log("LOAD Settings");
+    }
+
+    public void QuitButton()
+    {
+        SceneManager.LoadScene("StartGame");
+    }
+
+    public void Resume()
+    {
+        if (pauseMenuUI != null)
+        {
+            pauseMenuUI.SetActive(false);
+            Time.timeScale = 1f;
+            GameIsPaused = false;
+        }
     }
 
     public void Pause()
     {
-        PausePanel.SetActive(true);
-        Time.timeScale = 0;
+        if (pauseMenuUI != null)
+    {
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+    } else
+        {
+            Time.timeScale = 0f;
+            GameIsPaused = true;
+        }
     }
 
-    public void Continue()
+//Virtual Method
+    public virtual void AfterResume()
     {
-        PausePanel.SetActive(false);
-        Time.timeScale = 1;
+        Debug.Log("Show Menu option too.");
     }
+
 }

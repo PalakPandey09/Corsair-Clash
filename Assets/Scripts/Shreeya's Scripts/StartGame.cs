@@ -3,47 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartGame : MonoBehaviour
+public class StartGame : PauseMenu
 {
-    public static bool GameIsPaused = false;
-
-    public GameObject pauseMenuUI;
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (GameIsPaused)
-            {
-                Resume();
-            }
-            else
-            {
-                Pause();
-            }
-
-        }
-    }
-
-    public void Resume()
-    {
-        pauseMenuUI.SetActive(false);
-        Time.timeScale = 1f;
-        GameIsPaused = false;
-
-    }
-
-    void Pause()
-    {
-        pauseMenuUI.SetActive(true);
-        Time.timeScale = 0f;
-        GameIsPaused = true;
-    }
-
     public void StartGameButton()
     {
         SceneManager.LoadScene("OverworldMap");
+    }
+
+    //Overrides the virtual method from its superclass
+    public override void AfterResume()
+    {
+        base.AfterResume();
+        Debug.Log("Playing after resume");
     }
 }
