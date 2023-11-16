@@ -11,7 +11,7 @@ public class PlayerHealthBackup : MonoBehaviour
     private Image connected_bar;
     private float player_health;
     private float max_health;
-    public int unitLevel = 1;
+    public int unitLevel = 5;
 
     // Start is called before the first frame update
     void Start()

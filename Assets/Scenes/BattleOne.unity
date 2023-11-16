@@ -487,11 +487,11 @@ GameObject:
   - component: {fileID: 140425413}
   - component: {fileID: 140425412}
   - component: {fileID: 140425415}
-  - component: {fileID: 140425419}
   - component: {fileID: 140425417}
   - component: {fileID: 140425414}
   - component: {fileID: 140425416}
   - component: {fileID: 140425418}
+  - component: {fileID: 140425419}
   m_Layer: 0
   m_Name: UnitLevel1
   m_TagString: PlayerUnit
@@ -669,7 +669,7 @@ MonoBehaviour:
   enemyUnitTargeting: {fileID: 0}
   gunshot: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
   boom: {fileID: 8300000, guid: 29169d15d6fed419d9f93306bfda0747, type: 3}
-  levelOfUnit: 1
+  levelOfUnit: 5
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   enemyUnits: []
@@ -779,12 +779,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 140425411}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 850dbdfb792e94c13bc93c15c8654bde, type: 3}
+  m_Script: {fileID: 11500000, guid: 8dbb6c4293b4a4c1aa5a80578649f1ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
   health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
-  unitLevel: 1
 --- !u!1 &143363706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1635,7 +1634,7 @@ MonoBehaviour:
   enemyUnitTargeting: {fileID: 0}
   gunshot: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
   boom: {fileID: 8300000, guid: 29169d15d6fed419d9f93306bfda0747, type: 3}
-  levelOfUnit: 3
+  levelOfUnit: 5
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   enemyUnits: []
@@ -1745,12 +1744,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 385155612}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 850dbdfb792e94c13bc93c15c8654bde, type: 3}
+  m_Script: {fileID: 11500000, guid: 8dbb6c4293b4a4c1aa5a80578649f1ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
   health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
-  unitLevel: 3
 --- !u!1 &417137182
 GameObject:
   m_ObjectHideFlags: 0
@@ -2187,12 +2185,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 467317343}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 850dbdfb792e94c13bc93c15c8654bde, type: 3}
+  m_Script: {fileID: 11500000, guid: 8dbb6c4293b4a4c1aa5a80578649f1ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
   health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
-  unitLevel: 5
 --- !u!1 &474289259
 GameObject:
   m_ObjectHideFlags: 0
@@ -2227,7 +2224,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 303.83, y: -100.98001}
+  m_AnchoredPosition: {x: 303.83, y: -100.979965}
   m_SizeDelta: {x: -623.82, y: -219.55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &474289261
@@ -2608,7 +2605,6 @@ GameObject:
   m_Component:
   - component: {fileID: 619509203}
   - component: {fileID: 619509202}
-  - component: {fileID: 619509210}
   - component: {fileID: 619509207}
   - component: {fileID: 619509200}
   - component: {fileID: 619509199}
@@ -2792,11 +2788,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619509198}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a523080fec7049f2957cbc755e2b952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
+  health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
 --- !u!82 &619509208
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2810,7 +2808,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 0.89
+  m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -2893,21 +2891,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &619509210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 619509198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fc705d40c2bc42f5970cb152cfcaf16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
-  health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
-  unitLevel: 1
 --- !u!1 &675064402
 GameObject:
   m_ObjectHideFlags: 0
@@ -4999,7 +4982,7 @@ MonoBehaviour:
   enemyUnitTargeting: {fileID: 0}
   gunshot: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
   boom: {fileID: 8300000, guid: 29169d15d6fed419d9f93306bfda0747, type: 3}
-  levelOfUnit: 4
+  levelOfUnit: 5
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   enemyUnits: []
@@ -5109,12 +5092,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1253014650}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 850dbdfb792e94c13bc93c15c8654bde, type: 3}
+  m_Script: {fileID: 11500000, guid: 8dbb6c4293b4a4c1aa5a80578649f1ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
   health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
-  unitLevel: 4
 --- !u!1 &1260805134
 GameObject:
   m_ObjectHideFlags: 0
@@ -5471,7 +5453,6 @@ GameObject:
   - component: {fileID: 1423621297}
   - component: {fileID: 1423621299}
   - component: {fileID: 1423621300}
-  - component: {fileID: 1423621301}
   m_Layer: 0
   m_Name: EnemyUnit2
   m_TagString: EnemyUnit
@@ -5635,7 +5616,7 @@ MonoBehaviour:
   targetY: 0
   gunshot: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
   boom: {fileID: 8300000, guid: 29169d15d6fed419d9f93306bfda0747, type: 3}
-  levelOfUnit: 2
+  levelOfUnit: 1
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   PlayerBullet1: {fileID: 1895591220503798199, guid: 6c7d247398e564413a9ffa926789b3da, type: 3}
@@ -5646,11 +5627,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1423621291}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a523080fec7049f2957cbc755e2b952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
+  health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
 --- !u!82 &1423621300
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5664,7 +5647,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 0.74
+  m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -5747,21 +5730,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1423621301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1423621291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fc705d40c2bc42f5970cb152cfcaf16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
-  health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
-  unitLevel: 2
 --- !u!1 &1481270088
 GameObject:
   m_ObjectHideFlags: 0
@@ -6643,7 +6611,7 @@ MonoBehaviour:
   enemyUnitTargeting: {fileID: 0}
   gunshot: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
   boom: {fileID: 8300000, guid: 29169d15d6fed419d9f93306bfda0747, type: 3}
-  levelOfUnit: 2
+  levelOfUnit: 5
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   enemyUnits: []
@@ -6753,12 +6721,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1931795744}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 850dbdfb792e94c13bc93c15c8654bde, type: 3}
+  m_Script: {fileID: 11500000, guid: 8dbb6c4293b4a4c1aa5a80578649f1ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
   health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
-  unitLevel: 2
 --- !u!1 &1938267360
 GameObject:
   m_ObjectHideFlags: 0
@@ -6774,7 +6741,6 @@ GameObject:
   - component: {fileID: 1938267366}
   - component: {fileID: 1938267368}
   - component: {fileID: 1938267369}
-  - component: {fileID: 1938267370}
   m_Layer: 0
   m_Name: EnemyUnit3
   m_TagString: EnemyUnit
@@ -6938,7 +6904,7 @@ MonoBehaviour:
   targetY: 0
   gunshot: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
   boom: {fileID: 8300000, guid: 29169d15d6fed419d9f93306bfda0747, type: 3}
-  levelOfUnit: 3
+  levelOfUnit: 1
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
   PlayerBullet1: {fileID: 1895591220503798199, guid: 6c7d247398e564413a9ffa926789b3da, type: 3}
@@ -6949,11 +6915,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1938267360}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a523080fec7049f2957cbc755e2b952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
+  health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
 --- !u!82 &1938267369
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6967,7 +6935,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 1.12
+  m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -7050,21 +7018,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1938267370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1938267360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fc705d40c2bc42f5970cb152cfcaf16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
-  health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
-  unitLevel: 3
 --- !u!1 &2096458886
 GameObject:
   m_ObjectHideFlags: 0

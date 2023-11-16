@@ -2555,7 +2555,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 303.83, y: -100.98001}
+  m_AnchoredPosition: {x: 303.83, y: -100.98}
   m_SizeDelta: {x: -623.82, y: -219.55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &474289261
@@ -3394,6 +3394,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a523080fec7049f2957cbc755e2b952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
+  health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
 --- !u!82 &642821715
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3504,7 +3506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
   health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
-  unitLevel: 3
+  unitLevel: 1
 --- !u!1 &679272873
 GameObject:
   m_ObjectHideFlags: 0
@@ -4463,11 +4465,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 816736385}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a523080fec7049f2957cbc755e2b952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
+  health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
 --- !u!70 &816736391
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4634,7 +4638,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
   health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
-  unitLevel: 3
+  unitLevel: 1
 --- !u!1 &832075490
 GameObject:
   m_ObjectHideFlags: 0
@@ -8615,6 +8619,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a523080fec7049f2957cbc755e2b952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
+  health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
 --- !u!82 &2050684964
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8725,7 +8731,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
   health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
-  unitLevel: 3
+  unitLevel: 1
 --- !u!1 &2096458886
 GameObject:
   m_ObjectHideFlags: 0
