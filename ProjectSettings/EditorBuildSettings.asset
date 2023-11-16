@@ -6,14 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/OverworldMapPostBoss.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/start menu.unity
+    guid: ddebeeaded3de1e44aa01ecca1f01f8b
   - enabled: 1
     path: Assets/Scenes/OverworldMap.unity
     guid: fdaa0b473a83ada4daf1d400496fcc4a
   - enabled: 1
     path: Assets/Scenes/BattleOne.unity
-    guid: 670cdcd5f8f89e746a23d3a75f45889e
+    guid: 046dea83bd5074187b634441332cd0dc
+  - enabled: 1
+    path: Assets/Scenes/OverworldMapPostBoss.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/OverworldMapPostBattle.unity
     guid: dfbdcc91767d0489f903ea928500ab8f
