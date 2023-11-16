@@ -249,7 +249,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 133389997}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fdd338878ff54ae0a7299b552453191, type: 3}
+  m_Script: {fileID: 11500000, guid: c79d9cbd53863470b928c02a157eeddb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 2052398752}
@@ -4983,11 +4983,7 @@ PrefabInstance:
       objectReference: {fileID: 133390003}
     - target: {fileID: 739747035362421524, guid: fc0a23d51855b42e98780be57b9ca116, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SettingsButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 739747035362421524, guid: fc0a23d51855b42e98780be57b9ca116, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PauseMenu, TL6
+      value: DisplaySettings
       objectReference: {fileID: 0}
     - target: {fileID: 2856878836762769667, guid: fc0a23d51855b42e98780be57b9ca116, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4996,10 +4992,6 @@ PrefabInstance:
     - target: {fileID: 2856878836762769667, guid: fc0a23d51855b42e98780be57b9ca116, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Resume
-      objectReference: {fileID: 0}
-    - target: {fileID: 2856878836762769667, guid: fc0a23d51855b42e98780be57b9ca116, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PauseMenu, TL6
       objectReference: {fileID: 0}
     - target: {fileID: 3792024727091577055, guid: fc0a23d51855b42e98780be57b9ca116, type: 3}
       propertyPath: m_Pivot.x
@@ -5085,29 +5077,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseMenu
       objectReference: {fileID: 0}
-    - target: {fileID: 6752021782543072340, guid: fc0a23d51855b42e98780be57b9ca116, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8076677839541065306, guid: fc0a23d51855b42e98780be57b9ca116, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 133390003}
     - target: {fileID: 8076677839541065306, guid: fc0a23d51855b42e98780be57b9ca116, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: QuitButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 8076677839541065306, guid: fc0a23d51855b42e98780be57b9ca116, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PauseMenu, TL6
+      value: QuitGame
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6752021782543072340, guid: fc0a23d51855b42e98780be57b9ca116, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2052398753}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc0a23d51855b42e98780be57b9ca116, type: 3}
 --- !u!224 &2052398751 stripped
 RectTransform:
@@ -5119,19 +5100,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6752021782543072340, guid: fc0a23d51855b42e98780be57b9ca116, type: 3}
   m_PrefabInstance: {fileID: 2052398750}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2052398753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2052398752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fdd338878ff54ae0a7299b552453191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 2052398752}
 --- !u!1 &2059036935
 GameObject:
   m_ObjectHideFlags: 0

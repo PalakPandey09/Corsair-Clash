@@ -5,8 +5,7 @@
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
         "Scripts",
-        "TL5",
-        "TL6"
+        "TL5"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -8,8 +8,8 @@
         "NewAssembly",
         "TL4",
         "TL5",
-        "TL3TestVisibility",
-        "TL6"
+        "TL6",
+        "TL3TestVisibility"
     ],
     "includePlatforms": [
         "Editor"
