@@ -12,6 +12,12 @@ TagManager:
   - Bullet
   - EnemyShipParent
   - HealthImage
+  - StartBtn
+  - NavigationPanel
+  - PlayerControl
+  - StartBattleBtn
+  - Canvas
+  - AIController
   layers:
   - Default
   - TransparentFX

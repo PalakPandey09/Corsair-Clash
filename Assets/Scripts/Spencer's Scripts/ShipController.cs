@@ -17,7 +17,9 @@ public class ShipControls : MonoBehaviour
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        battleButton.SetActive(false);
+        if(!GameObject.FindGameObjectWithTag("AIController").GetComponent<AIDemoController>().isIdle) {
+            battleButton.SetActive(false);
+        }
     }
 
     //When the OnMoveBody event is invoked, sets the movementVector to the input values from PlayerInput

@@ -1282,7 +1282,7 @@ GameObject:
   - component: {fileID: 860739045}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: PlayerControl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1296,7 +1296,7 @@ Transform:
   m_GameObject: {fileID: 860739042}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.46, y: -0.11368341, z: -0.031245977}
+  m_LocalPosition: {x: -3.061, y: 0.064, z: -0.031245977}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1345,7 +1345,7 @@ GameObject:
   - component: {fileID: 863405732}
   m_Layer: 5
   m_Name: StartBattleButton
-  m_TagString: Untagged
+  m_TagString: StartBattleBtn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3436,7 +3436,7 @@ GameObject:
   - component: {fileID: 2114343781}
   m_Layer: 0
   m_Name: PlayerShip
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3783,6 +3783,10 @@ PrefabInstance:
     - target: {fileID: 579359959873807134, guid: 48e0ba02c39bc7d49a15c0be12d2ee5e, type: 3}
       propertyPath: m_Name
       value: Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 579359959873807134, guid: 48e0ba02c39bc7d49a15c0be12d2ee5e, type: 3}
+      propertyPath: m_TagString
+      value: NavigationPanel
       objectReference: {fileID: 0}
     - target: {fileID: 4517482465494910081, guid: 48e0ba02c39bc7d49a15c0be12d2ee5e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

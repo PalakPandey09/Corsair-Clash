@@ -84,30 +84,24 @@ public class player_health_manager : MonoBehaviour
         if (newCanvas != null)
         {
             newCanvas.GetComponent<Canvas>().worldCamera = Camera.main;
-            Debug.Log("new canvas is not null");
         }
         newCanvas.transform.SetParent(gameObject.transform, true);
         //finds position of unit the health bar is attached to
-        Debug.Log("4");
         //pulls image prefab 
         Image createImage = Instantiate(health_bar);
         createImage.transform.SetParent(newCanvas.transform, true);
-        Debug.Log("1");
         //sets health bar position slightly above its unit
         createImage.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
         createImage.transform.localPosition = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y+0.5f);
         connected_bar = createImage;
-        Debug.Log("5");
         
     }
 
     // Update is called once per frame
     void Update()
     {   
-        Debug.Log("2");
         //updates position of health bar
         connected_bar.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y+0.5f);
-        Debug.Log("3");
         //removes health when unit dies
         if(enemy_health <= 0)
         {
