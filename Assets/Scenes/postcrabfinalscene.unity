@@ -1543,7 +1543,7 @@ GameObject:
   - component: {fileID: 1939789336}
   m_Layer: 5
   m_Name: board
-  m_TagString: Untagged
+  m_TagString: CommandeerBtn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1764,7 +1764,7 @@ GameObject:
   - component: {fileID: 2016388030}
   m_Layer: 5
   m_Name: Sink
-  m_TagString: Untagged
+  m_TagString: SinkBtn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

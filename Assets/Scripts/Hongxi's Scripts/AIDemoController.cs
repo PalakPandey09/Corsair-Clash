@@ -12,6 +12,7 @@ public class AIDemoController: MonoBehaviour {
    private Vector3 lastMousePosition;
    public bool isIdle;
    private bool isAI;
+   private bool chooseLeft;
 
    private void Awake() {
       DontDestroyOnLoad(this);
@@ -30,6 +31,7 @@ public class AIDemoController: MonoBehaviour {
       handleSceneChange(SceneManager.GetActiveScene(), LoadSceneMode.Single);
       isIdle = false;
       isAI = false;
+      chooseLeft = true;
    }
 
    private void Update() {
@@ -96,6 +98,10 @@ public class AIDemoController: MonoBehaviour {
             startBattelBtn = canvas.transform.GetChild(1).GetComponent<Button>();
             StartCoroutine(placePlayerUnit());
             break;
+         case "postcrabfinalscene":
+            StopAllCoroutines();
+            StartCoroutine(chooseFinalSelection());
+            break;
          }
       }
    }
@@ -145,5 +151,25 @@ public class AIDemoController: MonoBehaviour {
          yield return new WaitForSeconds(0.5f);
          playerUnits[index].transform.position = emptySlots[index].transform.position;
       }
+   }
+
+   private IEnumerator chooseFinalSelection() {
+      yield return new WaitForSeconds(5);
+      Button btn;
+      if(chooseLeft) {
+         btn = GameObject.FindGameObjectWithTag("CommandeerBtn").GetComponent<Button>();
+         chooseLeft = false;
+         btn.onClick.Invoke();
+      }
+      else {
+         btn = GameObject.FindGameObjectWithTag("SinkBtn").GetComponent<Button>();
+         chooseLeft = true;
+         btn.onClick.Invoke();
+      }
+
+      btn.onClick.Invoke();
+      yield return new WaitForSeconds(5);
+
+      SceneManager.LoadScene("start menu");
    }
 }

@@ -18,6 +18,8 @@ TagManager:
   - StartBattleBtn
   - Canvas
   - AIController
+  - CommandeerBtn
+  - SinkBtn
   layers:
   - Default
   - TransparentFX

@@ -29,11 +29,16 @@ public class CrabManager : BattleManager
     void Update()
     {
         numChecked = 0;
-        foreach(GameObject unit in playerUnits){
-            if(unit.transform.position.x < 4){
-                numChecked = numChecked + 1;
+      try {
+         foreach(GameObject unit in playerUnits) {
+            if(unit.transform.position.x < 4) {
+               numChecked = numChecked + 1;
             }
-        }
+         }
+      }
+      catch {
+
+      }
         if(numChecked == numUnits) {
             startBattle.SetActive(true);
         }

@@ -43,13 +43,18 @@ public class BattleManager : MonoBehaviour
     void Update()
     {
         numChecked = 0;
-        //Once all player units are set, it sets the start battle button to active
-        foreach(GameObject unit in playerUnits){
-            if(unit.transform.position.x < 4){
-                numChecked = numChecked + 1;
+      //Once all player units are set, it sets the start battle button to active
+      try {
+         foreach(GameObject unit in playerUnits) {
+            if(unit.transform.position.x < 4) {
+               numChecked = numChecked + 1;
             }
-        }
-        if(numChecked == numUnits) {
+         }
+      }
+      catch {
+
+      }
+      if(numChecked == numUnits) {
             startBattle.SetActive(true);
         }
         if(numChecked != numUnits) {

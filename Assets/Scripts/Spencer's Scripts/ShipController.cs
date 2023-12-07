@@ -17,8 +17,10 @@ public class ShipControls : MonoBehaviour
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        if(!GameObject.FindGameObjectWithTag("AIController").GetComponent<AIDemoController>().isIdle) {
-            battleButton.SetActive(false);
+        if(GameObject.FindGameObjectWithTag("AIController") != null) {
+            if(!GameObject.FindGameObjectWithTag("AIController").GetComponent<AIDemoController>().isIdle) {
+                battleButton.SetActive(false);
+            }
         }
     }
 

@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CrabFight.unity
     guid: 85268a24a73664e55a9c3836abe9c3c7
+  - enabled: 1
+    path: Assets/Scenes/postcrabfinalscene.unity
+    guid: 6d9cc309d9d8c8343ac07327c868364d
   m_configObjects: {}

@@ -4527,7 +4527,7 @@ MonoBehaviour:
   levelOfUnit: 1
   foundTarget: 0
   PlaceUnitsCanvas: {fileID: 679272876}
-  PlayerBullet1: {fileID: 0}
+  PlayerBullet1: {fileID: 1895591220503798199, guid: 6c7d247398e564413a9ffa926789b3da, type: 3}
 --- !u!82 &816736393
 AudioSource:
   m_ObjectHideFlags: 0
