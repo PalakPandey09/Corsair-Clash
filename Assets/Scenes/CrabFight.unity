@@ -3111,6 +3111,7 @@ GameObject:
   - component: {fileID: 642821714}
   - component: {fileID: 642821715}
   - component: {fileID: 642821716}
+  - component: {fileID: 642821717}
   m_Layer: 0
   m_Name: Claw 2
   m_TagString: EnemyUnit
@@ -3507,6 +3508,27 @@ MonoBehaviour:
   canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
   health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
   unitLevel: 1
+--- !u!114 &642821717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642821706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dd66a7da6c9d4bf9af3ae03ff9d6b09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allPlayerUnits: []
+  targetX: 0
+  targetY: 0
+  gunshot: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
+  boom: {fileID: 8300000, guid: 29169d15d6fed419d9f93306bfda0747, type: 3}
+  levelOfUnit: 0
+  foundTarget: 0
+  PlaceUnitsCanvas: {fileID: 679272876}
+  PlayerBullet1: {fileID: 1895591220503798199, guid: 6c7d247398e564413a9ffa926789b3da, type: 3}
 --- !u!1 &679272873
 GameObject:
   m_ObjectHideFlags: 0
@@ -8336,6 +8358,7 @@ GameObject:
   - component: {fileID: 2050684960}
   - component: {fileID: 2050684964}
   - component: {fileID: 2050684965}
+  - component: {fileID: 2050684966}
   m_Layer: 0
   m_Name: 'Claw 1 '
   m_TagString: EnemyUnit
@@ -8732,6 +8755,27 @@ MonoBehaviour:
   canvas: {fileID: 4135003705446312494, guid: a474307641d7a499aa63e79ce184eca2, type: 3}
   health_bar: {fileID: 7075339413076030552, guid: a612d8a338fdd894986d950ec14aa04d, type: 3}
   unitLevel: 1
+--- !u!114 &2050684966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050684956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dd66a7da6c9d4bf9af3ae03ff9d6b09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allPlayerUnits: []
+  targetX: 0
+  targetY: 0
+  gunshot: {fileID: 8300000, guid: a0da6ae8ae15342acb78f02f557765e9, type: 3}
+  boom: {fileID: 8300000, guid: 29169d15d6fed419d9f93306bfda0747, type: 3}
+  levelOfUnit: 0
+  foundTarget: 0
+  PlaceUnitsCanvas: {fileID: 679272876}
+  PlayerBullet1: {fileID: 1895591220503798199, guid: 6c7d247398e564413a9ffa926789b3da, type: 3}
 --- !u!1 &2096458886
 GameObject:
   m_ObjectHideFlags: 0

@@ -43,7 +43,13 @@ public class EnemyAI: UnitAI {
    // </summary>
    // <param name="target"></param>
    public override void Attack(float targetX, float targetY, GameObject bullet) {
-      bullet.transform.position = new Vector2(this.transform.position.x, this.transform.position.y - 0.4f);
+      Debug.Log(gameObject.name);
+      if(gameObject.name == "Claw 1" || gameObject.name == "Claw 2") {
+         bullet.transform.position = new Vector2(this.transform.position.x, this.transform.position.y - 1.5f);
+      }
+      else {
+         bullet.transform.position = new Vector2(this.transform.position.x, this.transform.position.y - 0.4f);
+      }
       bullet.transform.rotation = Quaternion.Euler(new Vector3(targetX, targetY, 0));
       bullet.SetActive(true);
    }
